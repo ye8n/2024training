@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>이름표 label</h1>
+  <p>
+    <ul>
+      <li>인라인</li>
+      <li>폼과 관련된 요소에 이름표 지정</li>
+      <li>label 요소를 정의함으로써 폼 요소와 연관시킬 수 있음</li>
+      <li>키보드를 통해 컨트롤이 가능하며 접근성 향상</li>
+      <li>&lt;input id="one"&gt;의 아이디 값과 &lt;label for="one"&gt;의 값이 동일해야 함</li>
+    </ul>
+  </p>
+
+  <form> 
+    <section>
+     <h2>연결 방법1</h2>
+     <label>이름: <input type="text" name="userName"></label>
+    </section>
+    <hr>
+
+    <!-- 위보단 이게 더 잘 쓰이는데 현재는 이것도 잘 ?  -->
+    <!-- 
+      <table>, <tr>, <td>, <th>은 함께 작성해야 표가 만들어짐
+        <tabel>: 테이블 작성시 시작을 알리는 태그
+        <tr>: 테이블의 행(줄)
+        <th>: 테이블의 셀(칼). 셀의 소제목 table head
+        <td>: 테이블의 셀(칸). 일반적인 셀
+       -->
+    <section>
+      <h2>연결 방법2</h2>
+      <table border="1">
+        <tr>          
+          <th><input type="radio" name="fruits" value="복숭아" id="peach"></th>
+          <td><label for="peach">복숭아</label></td>
+        </tr>
+        <tr>
+          <th><input type="radio" name="fruits" value="포도" id="grape"></th>
+          <td><label for="grape">포도</label></td>
+        </tr>
+      </table>
+    </section>
+  
+  </form>
+</body>
+</html>

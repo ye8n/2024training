@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body{
+  background-color: rgb(130, 150, 180);
+}
+h2{
+  background-color: #fff;
+}
+#title1{
+  color: salmon;
+}
+#title2{
+  color: brown;
+}
+#title3{
+  color: navy;
+}
+#title4{
+  color: rgb(120, 60, 60);
+}

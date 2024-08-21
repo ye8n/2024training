@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* css 주석 방식 */
+
+/* css 기본 구조
+  선택자 selector {
+    속성 property: 값 value; }
+*/
+
+선택자 selector {
+  color: orange;
+}
+
+h1 {/* 타입 선택자: html 요쇼를 그대로 가져와 사용*/
+  color: orange;
+}
