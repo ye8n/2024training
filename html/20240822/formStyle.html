@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+    <title>formStyle</title>
+    <link rel="stylesheet" href="./formStyle.css">
+</head>
+<body>
+
+  <form>
+    <fieldset>
+      <legend>form event</legend>
+       <label for="userName">이름: </label> 
+        <input type="text" name="userName" id="userName" placeholder="이름을 작성하세요" autofocus>        
+      <button type="submit" id="button">전송</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>:checked</legend>
+        <input type="checkbox" name="check" id="check"value="체크1">
+        <label for="check">체크1</label>
+        <label for="check">체크2</label>
+        <label for="check">체크3</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>progress</legend>
+      <label for="userProg">progress</label>
+      <progress id="userProg"min="0" max="100" value="80"></progress>
+    </fieldset>
+
+    <fieldset>
+      <legend>range</legend>
+      <label for="userRange">range</label>
+      <input type="range" id="userRange">
+    </fieldset>
+
+  </form>
+
+
+
+
+  
+</body>
+</html>

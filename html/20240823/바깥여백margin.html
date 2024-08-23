@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">  
+  <title>바깥여백margin</title>
+  <style>
+    body{
+      background-color: #cdd;
+      margin: 0;
+    }
+    
+    h1{
+      background-color: beige;
+      width: 450px; 
+      border-bottom: 5px double rgb(85, 75, 75) ;
+      padding: 10px 20px; /* 실제 사이트 만들 때 패딩 넣어야 함 */      
+    }
+
+    .box{
+      width: 300px;
+      background-color: rgb(255, 255, 246);
+    }
+    .box1{
+      margin: 20px;
+    }
+    .box2{
+      margin: 10px 20px 30px 40px; /* top right bottom left */
+    }     
+    .box3{
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-bottom: 30px;
+      margin-right: 10px;
+    }    
+    .box4{ /* top+bottom:50px, right+left:20px */
+      margin: 50px 20px;
+    } 
+    .box5{
+      /* top:10 right:20 bottom:30 left:20 */
+      margin: 10px 20px 30px;
+    }
+
+    /* 마진 상쇄 현상
+      일반적인 흐름에서
+        1. 형제 관계 요소의 margin-bottom과 margin-top이 만나면 둘 중 큰 값이 적용됨
+        2. 부모 자식 관계 요소에서 margin-top의 값이 같이 들어간 경우 둘 중 큰 값이 적용됨 
+        3. 단! float, flex, overflow, position 등의 값이 적용된 경우는 발생하지 않음
+        
+      위 같은 마진 상쇄 현상은 패딩에는 없고, 마진이 가진 특징*/
+    .box6{
+      margin: 50px;
+      margin-bottom: 0;
+    }
+
+    .box7{
+      /* box7은 p라서 기본값 여백을 갖고 있음 */
+      margin: 0;
+    }
+   
+  </style>
+</head>
+<body>
+  <!-- h1.box : h1에 형제 관계로 box(이하생략)태그를 작성하겠다는 의미 -->
+  <!-- h1{기준 요소 바깥 여백 margin}+.box.box${$. 마진(margin)이란 기준 요소의 바깥 여백을 말한다.}*7 -->
+  <h1 class="h1box">기준 요소 바깥 여백 margin</h1>
+  <div class="box box1">1. 마진(margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+  <div class="box box2">2. 마진(margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+  <div class="box box3">3. 마진(margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+  <div class="box box4">4. 마진(margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+  <div class="box box5">5. 마진(margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+  <div class="box box6">6. 마진(margin)이란 기준 요소의 바깥 여백을 말한다.</div>
+  <p class="box box7">7. p요소</p>
+</body>
+</html>

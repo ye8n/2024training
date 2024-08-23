@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+body{
+  font-family: '함초롬바탕', '바탕', serif;
+  color: blueviolet;
+  font-size: 20px;
+}
+
+/* form 관련 요소들은 기본 스타일이 존재하기 때문에 직접 적용해야 함 */
+
+
+form > fieldset{ /* 자식선택자: form아래 바로 fieldset??? */
+  background-color: #f0f0f0;
+  text-align: center ; /* text-aligh은 상속 */
+}
+
+form > fieldset > legend{
+  background-color: #333;
+  color: #f0f0f0;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+/* 속성 선택자: 요소[속성="값"] */
+/* input 요소들 중에 type의 값이 text인 선택자 */
+form > fieldset > input[type="text"]{
+  font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+  color: pink;
+}
+
+form> fieldset > input[type="text"]::placeholder {
+  color: cadetblue;
+} 
+
+/* 버튼의 속성을 이용해 배경색, 서체, 크기와마우스를 위에 올렸을 때 상태 변경 */
+
+form> fieldset> button[type="submit"] {
+  font-family: '온글잎 누카', '함초롱바탕', 바탕 serif;  
+  background-color: blueviolet;
+  color: #f0f0f0;
+  font-size: 16px;  
+}
+
+form> fieldset> button[type="submit"]:hover {
+  color: blueviolet;
+  background: #f0f0f0;
+  cursor: pointer; /* 마우스 커서 모양 변경 */  
+}
+
+/* 
+- 인접 형제 선택자:  
+  선택자 + 선택자
+  기준 요소 바로 뒤에 오는 형제 관계 선택자 단 하나만
+- 일반 형제 선택자:
+  선택자 ~ 선택자
+  기준 요소 뒤에 오는 모든 형제 관계 선택자
+
+(일반보다 인접을 더 많이 사용함)
+*/
+
+
+/* 1. input[name="check"] ~ label 이란? : input[name="check"] 뒤에 나오는 형제인 label 전부에 적용하라는 뜻 */
+/* 2. input[name="check"] + label 이란? : input[name="check"] 뒤에 나오는 형제인 "첫 label에만" 적용하라 */
+
+/* 3. form> fieldset> input[name="check"]:checked +/~label 이란? : 체크박스나 라디오버튼에 체크가 되면 적용하라 */
+
+form> fieldset> input[name="check"]:checked +label {
+  /* appearance: none; form과 관련된 요소들의 기본 스타일 제어. appearance: none;: 체크박스 이미지를 숨길 수 있음 */
+  
+
+  background-color: blueviolet;
+  color: #fff;
+}
+
+/* 
+  accent-color 속성
+  input type=checkbox, radio, range, progress 컨트롤 값 제어할 때 사용
+*/
+
+form>fieldset>input[type="checkbox"], 
+form>fieldset>progress[max],
+form>fieldset>input[id=userRange]
+{
+  accent-color: rgb(255, 255, 203);
+
+}
+
+/* 다중 선택자: 여러 개의 선택자를 작성할 경우 쉼표(,)로 구분 */

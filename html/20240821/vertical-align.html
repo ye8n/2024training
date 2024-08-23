@@ -3,6 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>vertical-align</title>
+  <style>
+    p{
+      background-color: #3FA2F6;
+      color: #fff;
+      font-weight: bold;
+      font-size: 25px;      
+    }
+    
+    /* 현재 요소와 자손을 모두 top 기준 */
+    .six-months {
+      vertical-align: top; /*그림도 제일 큰 글자로 취급*/ /*왜 여백이 없지?*/
+    }
+    .one-year {
+      vertical-align: baseline ;  /* 기본값, 알파벳 꼬리(g나 y의 끝부분 같은 것) 무시하고 베이스라인에 글과 그림을 맞춤 */
+    }
+    /* 현재 요소와 자손들 모두 bottom 기준 */
+    .two-years1 {
+      vertical-align: bottom; /* 꼬리 밑이 기준*/
+    }
+    /* 부모 기준(baseline)으로 글자 높이의 반영 */
+    .two-years2 {
+      vertical-align: middle; 
+    }
+    /* 이미지의 기본값으로 설정 */
+    .two-years3 {
+      vertical-align: top; /*?*/
+    }
+  </style>
 </head>
 <body>
   <h1>인라인 세로 정렬 vertical-align</h1>
@@ -20,15 +48,15 @@
     one-year: baseline
   </p>
   <p>
-    <img src="./images/two-years.gif" alt="two-months" class="two-months1">
-    two-months: bottop
+    <img src="./images/two-years.gif" alt="two-months" class="two-years1">
+    two-years: bottop
   </p>
   <p>
-    <img src="./images/two-years.gif" alt="two-months" class="two-months2">
-    two-months: middle
+    <img src="./images/two-years.gif" alt="two-months" class="two-years2">
+    two-years: middle
   </p>
   <p>
-    <img src="./images/two-years.gif" alt="two-months" class="two-months">
+    <img src="./images/two-years.gif" alt="two-months" class="two-years3">
     
   </p>
   

@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+::selection{ /*문서의 일부분 강조. 텍스트 드래그했을 때*/
+  background-color: orange;
+  color: #fff;
+}
+
+body{
+
+  font-family: '나눔고딕', '함초롬고딕', 돋움, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+h1{
+  color: #088395;
+  line-height: 1.2;
+  text-transform: capitalize; /*첫 번째 글자 대문자*/
+}
+
+h1::selection{
+  background-color: orangered;
+}
+
+/* https://developer.mozilla.org/ko/docs/Web/CSS/Pseudo-classes */
+
+/* 의사 클래스, 의사 요소
+- :, :: 가상 선택자로 다양한 종류가 있으며 주로 실제하는 요소와 함께 작성
+- 의사 클래스: 직접 적용되는 것이 아니라 특정 상태에서 요소를 선택하게 만듦 : hover
+- 의사 요소: 특정 부분에 스타일을 적용하기 위해 사용 ::after */
+
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #83b4ff;
+  color: #fff;
+  /* 레이아웃이 무너질 수 있기 때문에 잘 사용하지 않음 
+  font-weight: bold;
+  font-size: 30px; */
+}
