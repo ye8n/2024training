@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">  
+  <title>em2</title>
+  <style>
+
+    body{
+      font-weight: bold;
+      /* font-size: 22px; : em으로 콘텐츠의 width height margin 등을 적용하면, body의 font-size를 변경할 때마다 콘텐츠 영역이 영향을 받음 */
+    }
+
+    .container{
+      background-color: lightblue;
+      /* width: 500px; height: 400px; */
+      width: 31.25em; height: 25em;
+      /* margin: 30px auto; */
+      margin: 1.875em auto;
+      /* em으로 변환 가능  */
+    }
+
+    .container .box1_wrapper{
+      /* font-size: 22px; */
+      font-size: 1.375em; /* 부모인 container에 정의된 font-size가 없기 때문에, 그 부모요소인 body의 font-size를 기준으로 함 */
+      border: 1px solid #000;
+      /* margin: 20px; */
+      margin: 1.25em;  /*부모의 font-size가 기준? 이거이해못함 */
+    }
+  
+    .container .box1_wrapper p{
+      background-color: lightcoral;
+      margin: 20px;
+      /* .box1_wrapper에 font-size가 정의되어있기 때문에, 1.375em(22px)을 기준으로 함 */
+      margin: 0.9em; /*원래 0.9090909090909091em라서 살짝 오차 있지만 ㄱㅊ*/
+      
+      }
+
+    .container .box2_wrapper{      
+      border: 1px solid #000;
+      margin: 20px;
+      /* .box2_wrapper와 .container에 font-size가 정의되어 있지 않기 때문에, 부모 요소인 body의 font-size를 기준으로 함 */
+      margin: 1.25em;
+    }
+  
+    .container .box2_wrapper p{
+      background-color: lightcyan;
+      margin: 20px;
+      }
+
+  </style>
+</head>
+<body>
+  <h1>em 단위</h1>
+  <li>나를 감싸고 있는 <strong>부모 요소의 font-size</strong>를 기준으로 계산</li>
+
+  <div class="container">
+    container
+    <div class="box1_wrapper">
+      box1
+      <p>box1_p</p> 
+    </div>
+    <div class="box2_wrapper">
+      <p>box2_p</p> 
+    </div>
+  </div>
+</body>
+</html>

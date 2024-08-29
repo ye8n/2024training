@@ -1,0 +1,64 @@
+@charset "uft-8";
+
+body{
+  background-color: #FED9ED;
+  margin: 20px auto;
+  width: 60%;
+  font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+  font-size: 20px;
+}
+
+fieldset{
+  background-color: #fff;
+  border-radius: 20px;
+  border-color: #7360DF;
+  height: 200px;
+}
+
+legend{
+  width: 20%;
+  background-color: #7360DF;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 0 20px ;
+}
+
+
+div{
+  text-align: right;
+  
+}
+
+#bk{
+  text-align: center;
+  padding: 10px;
+}
+
+label>p>input:hover{
+  background-color: #FED9ED;
+  border: #7360DF 3px solid;
+}
+
+
+
+input{
+  border: 0;
+  
+  
+}
+
+
+button{
+  color: #fff;
+  background-color: #7360DF;
+  border: 0;
+  padding: 5px 20px;
+  cursor: pointer;
+
+}
+
+button:hover{
+  background-color: blue;
+  color: #fff;
+}
+

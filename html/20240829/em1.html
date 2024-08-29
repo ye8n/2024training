@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">  
+  <title>em1</title>
+  <style>
+    body{
+      font-weight: bold;
+      font-size: 16px; /*브라우저 기본 폰트 사이즈*/
+    }
+
+    /* 
+    * { /* 전체선택자*: 각 요소 요소에 적용되는 선택자로 실제 사용시 주의(잘 사용하진 x)*/
+      /* border: 1px solid #000;} */
+  
+
+    .wrapper *{
+      border: 3px solid #000;
+      padding: 20px; margin: 20px;
+      display: block; /*span이 block이 되면서 무너진 레이아웃이 복구됨*/
+    }
+
+    .wrapper{
+      border: 3px solid #000;
+      font-size: 1em; 
+      /* .wrapper의 부모인 body의 폰트 사이즈 16px
+      1em = 16px */
+    }
+
+    body{
+      font-size: 22px;
+    }
+
+    .wrapper > .box{
+      font-size: 1.1em;
+      /* .wrpper 22px => 1em 
+        1.1em => 약 24.2 */
+    }
+    .wrapper > .box > p {
+      font-size: 1.1em;
+      /* box 24.2px => 1em
+      1.1em => 26.62 */
+    }
+    .wrapper > .box > p > span {
+      font-size: 0.8em;
+      /* 
+      p 26.62px => 1em
+      0.8em => 21.2
+      p의 1em은 26.62니까...21.296 */
+    }
+
+    .wrapper > h2{
+      font-size: 1.2em;
+      /* h2의 부모인 .wrapper에 font-size가 있기 때문에, .wrapper의 font-size를 기준으로 함
+      1.2em =>  약 19px(19.2px) (pixel to em 사이트 참고)*/    
+    }
+
+    .wrapper >span{
+      font-size: 1em;
+      /* 
+      1em =>  약 19px(19.2px)
+      span의 부모인 h2에 font-size가 있기 때문에, span의 기준은 h2의 font-size가 됨
+      */
+    }
+
+    .wrapper > p{
+      font-size: 1em;
+      /* 
+      1em => 16px */
+    }
+
+  </style>
+</head>
+<body>
+  <h1>em 단위</h1>
+  <ul>
+    <li>알파벳 M을 기준으로 만들어진 단위</li>
+    <li>부모의 "font-size"를 기준으로 값 설정</li>
+    <li>브라우저의 기본 폰트 사이즈: 16px</li>
+  </ul>
+  <!-- .wrapper>h2>span^p  ^: 한단계위로, h2와 형제인 p가 만들어짐-->
+  <div class="wrapper">
+    .wrapper 1em ==
+    <h2>
+      h2 1.2em ==
+      <span>span 1em ==</span>
+    </h2>
+    <p>p 1em ==</p>
+
+    <div class="box">
+      .box 1.1em ==
+      <p>
+        p 1.1em ==
+        <span>span 0.8em ==</span>
+      </p>
+    </div>
+  </div>  
+</body>
+</html>

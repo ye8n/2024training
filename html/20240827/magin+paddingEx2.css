@@ -1,0 +1,77 @@
+@charset "uft-8";
+
+body{
+  font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.title{
+  background-color: #7695ff;
+  color: #fff;
+  padding: 10px;
+  text-align: center; /* ta:ce */
+  /* width: 500px; */
+  width: 60%;
+  min-width: 350px; /* 가로 최소의 크기가 350px */
+  max-width: 500px; /* 최대 크기값이 800px을 넘지 않음 */
+  margin: 30px auto;
+  border-bottom: yellowgreen 10px solid;
+  border-radius: 20px 20px 0 0;
+
+  }
+
+  h2{
+    text-align: center;
+    text-decoration: line-through;
+    font-size: 22px;
+  }
+
+  .list li{ /* 하위 선택자 */
+    border: 1px solid #000;
+    margin: 5px auto;
+    padding: 5px;
+    width: 50%;
+    max-width: 400px;
+    text-align: left;
+  }
+
+  p{
+    background-color: #FFDE95;
+    width: 60%;
+    min-width: 300px;
+    padding: 10px;
+    margin: 0 auto 1px; 
+    /* margin-bottom: 1px; */
+    
+  }
+  /*p*/ a{
+    color: #c57600;
+    text-decoration: none;    
+  }
+
+  p:hover{
+    background-color: #d8ffd8;    
+  }
+
+  .wrapper{
+    width: 60%;
+    min-width: 300px;
+    margin: 50px auto;
+    
+  }
+
+  .wrapper .site {
+    background-color: burlywood;
+    height: 40px;
+    border-bottom: 1px solid #fff;
+    line-height: 40px; 
+    /* 
+    한 줄인 경우, 세로 중앙 정렬 방법
+    - heigth와 line-height의 값을 동일하게 적용
+    - 폰트 사이즈와 크기가 큰 경우는 잘 안 됨 */
+    
+
+    
+  }

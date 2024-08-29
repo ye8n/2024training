@@ -1,0 +1,43 @@
+@charset "uft-8";
+
+body{
+  width: 600px;
+  font-family: '나눔고딕' , serif;
+  font-size: 20px;
+  font-style: normal;
+  margin: 20px auto;
+}
+
+h1{
+  background-color: #2da8eb;
+  color: #fff;
+  border-radius: 20px 20px 0 0 ;
+  text-align: center;
+  border-bottom: 7px solid antiquewhite;  
+}
+
+h2{
+  text-align: center;
+  text-decoration: line-through;
+}
+
+li{
+  border: 2px solid #222;
+  width: 200px; 
+  margin: 5px auto;
+
+}
+
+.button{
+    background-color: rgb(43, 110, 105);
+  color: #fff;
+  width: auto; height: 30px;
+  text-align: center;
+ 
+}
+
+.button:hover{
+  background-color: plum;
+  cursor: pointer;
+  
+}

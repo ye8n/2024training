@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>요소의실제크기2</title>
+  <style>
+    .box{
+      font-weight: bold;
+      background-color: rgb(221, 221, 221);
+      font-size: 20px;
+    }
+    .box1{
+      background-color: antiquewhite;
+      width: 400px; height: 300px;
+      outline: 10px solid salmon;
+      margin: 50px auto;
+    }
+
+    .box2{
+      border: solid 3px tomato;
+      background-color: yellow;
+      width: 300px; height: 300px;
+      margin: 0 auto;
+      padding-top: 100px;
+      padding-left: 20px;
+    }
+
+    .box3{
+      background-color: aquamarine;
+      outline: 4px solid violet ;
+      width: 300px; height: 400px;
+      margin: 20px auto 0;
+      padding: 20px 10px 0 30px;
+    }
+
+    .box4{
+      background-color: yellowgreen ;
+      border: green dotted 2px;
+      border-top: none;
+      width: 400px; height: 200px;
+      outline: rgba(218, 121, 214, 0.5) 20px solid;
+      margin: 20px auto 0;
+      padding: 10px 20px 0 0;
+    }
+
+    .box5{
+      width: 600px; height: 250px;
+      background-color: aliceblue;
+      padding: 50px 20px ;
+      border: solid blue 10px;
+      border-right: solid blue 5px;
+      border-left: solid blue 5px;
+    }
+
+    .box6{
+      width: 150px; height: 200px;
+      background-color: thistle;
+      margin: 50px auto 0;
+      padding: 10px 50px 50px 50px;
+      border: 4px groove blueviolet;
+      border-top-width: 10px;
+      border-bottom-width: 5px;  
+    }
+    
+  </style>
+</head>
+<body>
+  <h1>요소의 실제 크기2</h1>
+  <!-- .box.box$*6>p{너비:}+p{높이:} -->
+  <div class="box box1">
+    <!-- magin값 auto는 자동계산되는 값이므로 0으로 둠 -->
+    <p>너비: w400+ mlmr0(auto) = 400px</p>
+    <p>높이: h300+ mtmb100 =400px</p>
+  </div>
+  <div class="box box2">
+    <p>너비: w300+m0(auto)+pl20+blbr6</p>
+    <p>높이: h300+pt100+m0+b6</p>
+  </div>
+  <div class="box box3">
+    <p>너비: w300+ m0+ p40(10+30)+ b0=340</p>
+    <p>높이: h400+ m20+ p20(20+0)+ b0=440</p>
+  </div>
+  <div class="box box4">
+    <p>너비: w400+ pr20+ m0 + blbr4 = 424</p>
+    <p>높이: h200+ pt10+ mt20+ bt2 = 232</p>
+  </div>
+  <div class="box box5">
+    <p>너비: w600+ prpl40+ brbl10=650</p>
+    <p>높이: h250+ prpl100+ brbl20=370</p>
+  </div>
+  <div class="box box6">
+    <p>너비: w150+ m0+ p100(50+50)+ brbl8= 258</p>
+    <p>높이: h200+ mt50+ p60(10+50)+ btbb15(10+5)=325
+    </p>
+  </div>
+</body>
+</html>

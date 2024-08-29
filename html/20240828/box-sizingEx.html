@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">  
+  <title>box-sizingEx</title>
+  <style>
+    .box{
+      width: 400px; height: 200px;
+      margin: 20px auto 30px;
+      padding: 20px 30px;
+      border: 10px solid;
+      border-bottom-width: 5px;
+    }
+    .box2{
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>box-sizingEx</h1>
+  <!-- ..box.box$>h3{box-sizing:}+p{w}?? 어케해 -->
+  <div class="box box1">
+    <!-- box-sizing: content-box는 기본값 -->
+    <h3>box-sizing: content-box</h3>
+    <p>w400+m0+p60+b20=480</p>
+  </div>
+  <div class="box box2">
+    <h3>box-sizing: border-box</h3>
+    <p>w400(p60+b20)+m0=400</p>
+  </div>
+
+  .box.box$>h3{box-sizing:}+p{w}
+</body>
+</html>
