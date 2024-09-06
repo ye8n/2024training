@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>수열선택자</title>
+<style>
+  body{text-align: center;}
+  /* 4열 나열 작업... */
+  .box{
+    border: 3px solid #000;
+    width: 80vw; 
+    margin: 0 auto;
+    list-style: none; padding: 0;
+
+    display: flex; flex-flow: wrap;
+    justify-content: center;
+
+    width: calc(400px + 80px) ; /* 이거 아닌 거 같은데 */
+
+
+  }
+
+  .box li {
+    width: 100px; height: 100px;
+    margin: 10px;
+
+    background-color: #ddd;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+
+
+  }
+
+  .box p{
+    width: 100px; height: 100px;
+    margin: 10px;
+    background-color: #ddd; font-weight: bold;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  /* 2번째 박스 */
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+  }
+
+</style>
+</head>
+<body>
+  <h1>수열선택자 - 의사클래스</h1>
+  <!-- ul.box.container>li{$$}*22 -->
+  <ul class="box container">
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+    <li>04</li>
+    <li>05</li>
+    <li>06</li>
+    <li>07</li>
+    <p>p08</p> <!-- 연습을 위해 p로 변경. 원래는 틀린 문법! -->
+    <p>p09</p>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <p>p19</p>
+    <p>p20</p>
+    <p>p21</p>
+    <li>22</li>
+  </ul>
+
+  <!-- .box.wrpper>p{w$$}*14 -->
+  <div class="box wrpper">
+    <p>w01</p>
+    <p>w02</p>
+    <p>w03</p>
+    <p>w04</p>
+    <div>div05</p>
+    <div>div06</p>
+    <p>w07</p>
+    <p>w08</p>
+    <p>w09</p>
+    <p>w10</p>
+    <p>w11</p>
+    <p>w12</p>
+    <p>w13</p>
+    <p>w14</p>
+  </div>
+</body>
+</html>

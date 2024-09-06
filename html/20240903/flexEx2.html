@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx2</title>
+<style>
+  body{
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    /* 다른 방식을 사용하기 위해 주석처리
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* +a값인 magin 포함한 것이, 100vh * margin: 0; */
+  }
+
+  .box .item1{background-color: #FCDE70;}
+  .box .item2{background-color: #E8B86D;}
+  .box .item3{background-color: #674636;}
+  .box .item4{background-color: #185519;}
+  .box .item5{background-color: #CD5C08;}
+
+  .box{
+    list-style: none;
+    border: 3px solid #000;
+    padding: 0;
+    width: 70vw; height: 70vh;
+    /* css함수: calc(값 * 값): 반드시 연산자를 띄어써야 함! */
+    margin: calc(15vh - 3px) auto; /* 콘텐츠의 높이값이 70vh고 border값이 3px이므로,  (100-70)/2=15 */
+
+    display: flex;
+    /* 방법1.  주축을 row */
+    /*
+    flex-direction: row;
+    flex-wrap: wrap; /*flex-flow: row wrap;*/ 
+    /*justify-content: center;
+    align-content: center; */
+
+
+  /* 방법2. 주축 col; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+  .box .item{
+    width: 60%; height: 15%;
+    /* line-height: 15%; : 한 줄, px일 때만 사용 가능. */
+    
+    display: flex;
+    /* text-align: center; 인라인 요소에만 적용*/
+    justify-content: center;
+    align-items: center     
+
+  }
+
+</style>
+</head>
+<body>
+  <!-- 내부 박스, 글자 좌우, 상하 중앙 정렬 -->
+   <ul class="box">  <!-- flex container-->
+    <li class="item item1">item1<br>item</li> <!-- 박스의flex-item, 텍스트의 flex-container-->
+    <li class="item item2">item2<br>item</li>
+    <li class="item item3">item3<br>item</li>
+    <li class="item item4">item4<br>item</li>
+    <li class="item item5">item5<br>item</li>
+   </ul>
+</body>
+</html>

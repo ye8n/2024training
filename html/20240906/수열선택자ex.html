@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>수열선택자ex</title>
+<style>
+  /* :hover /159 같은색/ 2468같은색/ 37 같은 색 적용 */
+
+  .gnb{ list-style: none; padding: 0; margin: 20px;
+    display: flex;
+    /* background-color: ); */
+    
+
+ 
+
+    justify-content: space-between;
+  
+  }
+  .gnb li{
+    display: block;
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    text-align: center;
+    
+
+  }
+  .gnb li a{ text-decoration: none; color: black;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  
+  }
+
+  .gnb li:nth-child(4n+1){
+    background-color: gold;
+  }
+
+  .gnb li:nth-child(even){
+    background-color: skyblue;
+  }
+
+  .gnb li a:hover{
+    background-color: orangered;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .gnb li:nth-child(4n+3){
+    background-color: rgb(217, 246, 255);
+  }
+
+  .gnb li:first-of-type{
+    border-radius: 50px 0 0 50px;
+  }
+
+  .gnb li:last-child{
+    border-radius: 0 50px 50px 0;
+  }
+
+
+</style>
+</head>
+<body>
+  <!-- ul.gnb>li*9>a{$} -->
+  <ul class="gnb">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+  </ul>
+</body>
+</html>

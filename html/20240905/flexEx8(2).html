@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx8(2)</title>
+<!-- 수정하기 -->
+<style>
+  body{
+    text-align: center;
+    text-transform: capitalize;
+    font-family: '나눔고딕', 맑은 고딕, sans-serif;
+    font-weight: bold;
+  }
+  
+  .gallery{
+    border: 3px solid #000;
+
+    display: flex;
+    flex-flow: column wrap;  /* flex-direction + flex-wrap */
+    width: 640px; height: 500px;
+    margin: 0 auto;
+
+    /* gap: 10px; padding: 10px; : 여백 넣는 법 1 */  
+
+    /* 여백 넣는 법 2 */
+    justify-content: space-evenly;
+    align-content: space-evenly;
+
+    width: 600px;
+  }
+
+  .gallery figure{
+    margin: 0;
+
+    
+  }
+  .gallery figure img{
+    vertical-align: top; /* 이미지가 인라인이라서 생기는 여백을 vertical-align값을 변경해서 없애줌  */
+  }
+  .gallery figure figcaption{
+    background-color: #000;
+    color: #fff;
+
+    padding: 5px;
+  }
+
+
+</style>
+</head>
+<body>
+    <h1>상하 정렬 갤러리</h1>
+    <!-- .gallery>figure*4>img+figcaption{title$} -->
+    <div class="gallery">
+      <figure>
+        <img src="https://placehold.co/300x200/41b3a2/fff?text=img1&font=lora">
+        <figcaption>title1</figcaption>
+      </figure>
+      <figure>
+        <img src="https://placehold.co/300x200/800000/fff?text=img2&font=lora">
+        <figcaption>title2</figcaption>
+      </figure>
+      <figure>
+        <img src="https://placehold.co/300x200/FF8A8A/fff?text=img3&font=lora">
+        <figcaption>title3</figcaption>
+      </figure>
+      <figure>
+        <img src="https://placehold.co/300x200/522258/fff?text=img4&font=lora">
+        <figcaption>title4</figcaption>
+      </figure>
+    </div>
+</body>
+</html>

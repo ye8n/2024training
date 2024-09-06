@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>inline-flex(2)</title>
+<style>
+  ul{
+    list-style: none;
+    margin: 10px 5px; padding: 10px;
+    background-color: aquamarine;
+    font-weight: bold;
+  }
+
+  ul li{
+    padding: 10px;
+  }
+  /* ul 범위의 li중 첫번째 자식이 li일 때(=li:nth-chile(1)) bkc를 적용한다 */
+  ul li:nth-child(1) {background-color: #7695ff;}
+  ul li:nth-child(2) {background-color: #9dbdff;}
+  ul li:nth-child(3) {background-color: #ffd7c4;}
+  ul li:nth-child(4) {background-color: #ff9874;}
+
+  .box1{ /* flex-container */
+    display: inline-flex;
+  }
+
+  .box2{ /* flex-container */
+    display: flex;
+  }
+
+</style>
+</head>
+<body>
+  <h2>display:inline-flex 인라인 성격을 가진 채 flex 적용</h2>
+  <ul class="box1">
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+  </ul>
+  <ul class="box1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+  <ul class="box1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+
+  <h2>display:flex 블록 성격을 가진 채 flex 적용</h2>
+  <ul class="box2">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+  <ul class="box2">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+</body>
+</html>

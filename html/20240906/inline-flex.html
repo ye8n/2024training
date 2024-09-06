@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>inline-flex</title>
+<style>
+  body{text-align: center;}
+  ul{ list-style: none; padding: 0; margin: 0 auto;
+    background-color: aliceblue;    
+    color: #fff;
+    font-weight: bold;
+
+
+    display: flex;
+    width: 80vw;
+    padding: 10px;
+
+    
+
+  }
+  ul li{
+    width: 25%; height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul .item1{background-color: #800000;}
+  ul .item2{background-color: #FABC3F;}
+  ul .item3{background-color: #E85C0D;}
+  ul .item4{background-color: #FFAAAA;}
+
+</style>
+</head>
+<body>
+  <!-- ul.box1*3>li{item$}*4 -->
+  <!-- ul.box2*3>li{item$}*4 -->
+
+  <h2>display:inline-flex 인라인 성격을 가진 채 flex 적용</h2>
+  <ul class="box1">
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+  </ul>
+  <ul class="box1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+  <ul class="box1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+
+  <h2>display:flex 블록 성격을 가진 채 flex 적용</h2>
+  <ul class="box2">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+  <ul class="box2">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+</body>
+</html>

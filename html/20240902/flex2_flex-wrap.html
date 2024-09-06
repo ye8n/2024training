@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex2_flex-wrap</title>
+  <style>
+
+    .wrapper{
+      border: 6px solid #000;
+      width: 80vw;
+      margin: 2vw auto;
+      color: #fff;
+    }
+
+    .wrapper .item1{background-color: #ff7777;}
+    .wrapper .item2{background-color: #579aff;}
+    .wrapper .item3{background-color: #1a8616;}
+
+      #container{ /* flex-container */
+        display: flex; /*주축은 역방향(아래->위쪽)*/
+      }
+    #container{
+       display: flex;
+       flex-direction: row; /* 기본값 */
+
+       /* flex item을 한 줄 또는 여러 줄 배치. 줄바꿈 */
+       flex-wrap: nowrap; /* 기본값, flex item 한 줄 배치 */
+       flex-wrap: wrap; /* 콘텐츠가 넘치면(영역 밖으로 빠져나오면) 자동으로 줄바꿈 */
+       /* flex-wrap: wrap-reverse; 역방향 줄바꿈, 잘 사용하진 않음 */
+      }
+
+    #container .item{
+      width: 50%; /* 넘치지 않는 것이 기본값 */
+      height: 20vw;
+
+    }
+
+  </style>
+</head>
+<body>
+  <h1>
+    <a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">Flexbox</a></h1>
+
+  <h2>flex2_flex-wrap</h2>
+    <div class="wrapper" id="container"> <!-- flex-container -->
+    <div class="item item1">item1</div> <!-- flex-item -->
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    </div>
+  <img src="./flex.png" alt="flex 구조">
+</body>
+</html>

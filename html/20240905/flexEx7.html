@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx7</title>
+<style>
+  body{ 
+    margin: 0;
+    font-family: '나눔고딕', 맑은고딕, sans-serif;
+    font-weight: bold;
+  }
+  body .gnb{ background-color: gold; margin: 0;
+    display: flex;
+    padding: 0;
+
+    justify-content: space-between;
+
+    
+    
+  }
+  body .gnb li{
+    list-style: none;
+    
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  body .gnb li a{
+    text-decoration: none;
+    color: black;   
+    width: 120px; height: 3rem; /*  */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  
+  body .gnb li a:hover{
+    background-color: goldenrod;
+    color: #fff;
+ 
+  }
+
+</style>
+</head>
+<body>
+  <ul class="gnb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Company</a></li>
+    <li><a href="#">Product</a></li>
+    <li><a href="#">Service</a></li>
+    <li><a href="#">Board</a></li>
+  </ul>
+</body>
+</html>

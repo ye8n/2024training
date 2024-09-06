@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex7_align-content</title>
+  <style>
+    .wrapper{
+      border: 6px solid #000;
+      width: 46.875vw;
+      margin: 1.042vw auto;
+      width: 80vw; height: 2vw auto;
+    }
+    .wrapper .item{color: #fff; text-align: center; width: 50%;}
+    /* align-items: stretch와 높이값(height)이 함께 적용된 경우, 높이값이 우선 적용 */
+    .wrapper .item1{background-color: #ff7777; height: 150px;}
+    .wrapper .item2{background-color: #579aff; height: 10vw;}
+    .wrapper .item3{background-color: #1a8616; height: 10em;}
+    .wrapper .item4{background-color: #7d38b6; height: 10vh;}
+    .wrapper .item5{background-color: #000a92; height: 10%;}
+    
+    .wrapper{
+      display: flex; flex-flow: wrap; /* 주축 가로, 줄바꿈 */
+      height: 60vh;
+    }
+
+    #container1{
+      align-content: stretch; /* 기본값, 높이 값이 지정되어 있으면 적용되지 않음 (현재 높이 값 지정되어 있음) */
+      align-content: flex-start; 
+      align-content: flex-end; 
+      align-content: center;
+      align-content: space-around;
+      align-content: space-evenly;
+      align-content: space-between;
+      
+    }
+    #container2{
+      align-items: flex-start;
+      align-items: flex-end; 
+      align-items: center;
+      /* align-items: space-around; : align-itmes는 개별로 정렬되기 때문에 around 설정이 존재하지 않음 */
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">Flexbox</a></h1>
+
+  <h2>flex7_align-content</h2>
+  <div class="wrapper" id="container1"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+    <div class="item item4">item4</div><!-- flex-item -->
+    <div class="item item5">item5</div><!-- flex-item -->
+  </div>
+  <div class="wrapper" id="container2">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+    <div class="item item5">item5</div>
+
+    
+
+  </div>
+  <img src="./flex.png" alt="flex 구조">
+</body>
+</html>

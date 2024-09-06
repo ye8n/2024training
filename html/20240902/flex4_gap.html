@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex4_gap</title>
+  <style>
+
+    .wrapper{
+      border: 6px solid #000;
+      width: 80vw;
+      margin: 2vw auto;
+    }
+    .wrapper .item{
+      color: #fff;
+      text-align: center;
+    }
+    .wrapper .item1{background-color: #ff7777;}
+    .wrapper .item2{background-color: #579aff;}
+    .wrapper .item3{background-color: #1a8616;}
+    .wrapper .item4{background-color: #7d38b6;}
+
+      #container{
+        display: flex;
+        flex-flow: row-reverse wrap;
+
+        /* 아이템의 행과 열 사이의 간격; 아이템과 아이템 사이의 여백 */
+        gap: 0; /*기본값*/
+        gap: 20px;
+        gap: 30px 10px; /* row-gap column-gap */
+      }
+
+      #container .item{
+        width: 40%;
+        height: 15vw;
+        margin: 10px;
+      }
+
+  </style>
+</head>
+<body>
+  <h1>
+    <a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">Flexbox</a></h1>
+
+  <h2>flex4_gap</h2>
+    <div class="wrapper" id="container"> <!-- flex-container -->
+    <div class="item item1">item1</div> <!-- flex-item -->
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+  </div>
+  <img src="./flex.png" alt="flex 구조">
+</body>
+</html>

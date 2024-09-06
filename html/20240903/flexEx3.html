@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx3</title>
+<style>
+  body{
+    margin: 0;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .container{/*flex-container*/ background-color: #ddd;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-flow: column;
+    
+  }
+  .container header {background-color: #84e2ff;
+    height: 130px;} /* flex-item */
+  .container nav {background-color: #fff;
+    height: 80px;} /* flex-item */
+  .container .contents {background-color: rosybrown;/* flex-item */
+    display: flex;
+
+    /* height: vs; 100vh- header vh - nav vh */
+    height: calc(100vh - 130px - 80px);
+  
+  } /* flex-container(2) */
+
+    /* 100vw는 사용하지 않음. 스크롤의 값을 인식하지 못하기 때문에. 100%는 써도 100vw는 쓰지 않음 */
+  .container .contents aside {background-color: gold;
+    width: 30%;} /* flex-item(2) */
+  .container .contents section {background-color: rgb(142, 175, 92);
+    width: 70%;} /* flex-item(2) */
+  .container .contents section h2 {margin: 0; font-size: 2rem; /*h2의 기본 폰트사이즈: 1rem*/}
+
+
+  
+
+</style>
+</head>
+<body>
+  <div class="container"> <!-- flex-container -->
+    <header>header</header> <!-- flex-item -->
+    <nav>nav</nav> <!-- flex-item -->
+    <div class="contents"> <!-- flex-item -->
+      <aside>aside</aside>
+      <section>
+        <h2>section</h2>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

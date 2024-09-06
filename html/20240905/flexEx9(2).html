@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx9(2)</title>
+<style>
+  body{
+    text-align: center;
+    text-transform: capitalize; /* 첫번째 글자만 대문자로 */
+    font-size: 12px; /* h1과 h2의 글자 사이즈가 변경됨 */
+  }
+
+  .gallery{ /* flex-container */
+    list-style: none; margin: 0; padding: 0;  /* ul이 지닌 기본 속성 삭제 */
+    border: 3px solid #000;
+    margin: 0 auto; /* 맨 윗줄의 magin에 auto만 추가해도 됨 */
+    width: 80vw; /* %는 스크롤바를 인식하지만, vw는 스크롤바를 인식하지 못함. + 그래서 100vw는 스크롤바를 인식하지 못하기 때문에 사용을 권장하지 않음  */
+
+    display: flex;
+    flex-flow: wrap;
+    
+  }
+  .gallery li{ /* flex-item */
+    background: red;
+    margin: 1%;
+    box-sizing: border-box; /* width값+border값 = 실제 요소의 크기 */
+    /* width: 33.3333%; : 적용하면 3배열이 되지 않는 이유는, li요소가 magin값을 갖고 있기 때문에. li하나는 35.3333의 width 값을 가진다 */
+    width: 31.3333%;
+  }
+  .gallery li img{
+    vertical-align: middle; /* 이미지 아래에 생기는 여백을 없애는 방법 중 하나 */
+    /* opacity: 0.4; : li영역 확인을 위해 잠시 처리 */
+
+    width: 100%; /* 넘치는 컨텐츠 제어를 위해 */
+
+ 
+  }
+  .gallery li h2{
+    background-color: #000; color: #fff;
+    margin: 0;
+    padding: 10px;
+    
+  }
+
+
+
+
+</style>
+</head>
+<body>
+  <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+  <ul class="gallery">
+    <li>
+      <img src="https://placehold.co/300x200/674636/fff?text=img1" alt="">
+      <h2>title1</h2>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/CD5C08/fff?text=img2" alt="">
+      <h2>title2</h2>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/C1D8C3/fff?text=img3" alt="">
+      <h2>title3</h2>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/800000/fff?text=img4" alt="">
+      <h2>title4</h2>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/C8A1E0/fff?text=img5" alt="">
+      <h2>title5</h2>
+    </li>
+    <li>
+      <img src="https://placehold.co/300x200/1E2A5E/fff?text=img6" alt="">
+      <h2>title6</h2>
+    </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx6(2)</title>
+<style>
+  body{margin: 0;}
+  
+  header{
+    background-color: #ff9874;
+    display: flex;
+    /* justify-content: space-between; */
+    
+  }
+  header h1{ /* flex-item 이자 flex-container */
+    background-color: #7695ff; color: #fff; margin: 0;
+    width: 6rem; /* height: ;*/
+    aspect-ratio: 3 / 2; /* 가로 혹은 세로를 기준으로 (현재는 가로 기준) 3분의 2 비율 유지 */
+
+    display: flex; /*  */
+    justify-content: center;
+    align-items: center;
+    
+  }
+  header form{
+    background-color: #ffd7c4;
+    padding: 10px;
+    /* width: calc(100% - 6rem - 4.5rem); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  header nav{
+    background-color: #9dbdff; color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 4.5rem;
+
+    display: flex; /*  */
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+  }
+
+  /* 0905_ input style 바꾸기 */
+  header form [type] { /* form 하위의 type이 있는 모든 요소 (현재 문서에서는 input, button)에 적용 */
+    outline: none; /* 클릭 시 생기는 검은 테두리를 없애는 법 */
+    font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+    border: 1px solid #000;
+    padding: 4px 8px;
+  }
+
+  header form button[type=submit]{ /* button중 type=submit 속성이 있는 요소  */
+    cursor: pointer;
+    background-color: #9dbdff;
+    border-left: none;
+    width: 80px;
+  }
+
+  header form button[type=submit]:hover{
+    background-color: #000;
+    color: #fff;
+  }
+
+
+
+
+
+</style>
+</head>
+<body>
+  <header> <!-- flex-container -->     
+    <h1>로고</h1> <!-- flex-item -->
+    <form> <!-- flex-item / flex-container -->
+      <input type="search" placeholder="검색어를 입력하세요" autofocus> <!-- flex-item -->
+      <button type="submit">검색</button> <!-- flex-item -->
+    </form> 
+    <nav>메뉴</nav> <!-- flex-item -->
+  </header>
+</body>
+</html>

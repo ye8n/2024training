@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex6_align-items</title>
+  <style>
+    .wrapper{
+      border: 6px solid #000;
+      width: 46.875vw;
+      margin: 1.042vw auto;
+      width: 80vw; height: 2vw auto;
+    }
+    .wrapper .item{color: #fff; text-align: center;}
+    .wrapper .item1{background-color: #ff7777;}
+    .wrapper .item2{background-color: #579aff;}
+    .wrapper .item3{background-color: #1a8616;}
+
+    
+    .wrapper{
+      display: flex; flex-flow: row nowrap; /* 기본값 */
+
+      height: 40vh;
+      /* 주축 기준 중앙정렬 */
+      /* 아이템 여백 10px */
+      justify-content: center;
+      gap: 10px;
+    }
+
+    #container1{
+      align-items: stretch; /* 기본값, 아이템의 높이 값이 없어도, 컨테이너의 높이 값만큼 아이템이 확장 정렬 */
+      align-items: flex-start; /* 교차축 기준 시작점부터 정렬 */
+      align-items: flex-end; /* 교차축 기준 끝점부터 정렬 */
+      align-items: center; /* 교차축 기준 중앙 정렬 */      
+    }
+
+    #container2{
+      /* 주축 세로 방향 */
+      flex-direction: column;
+      /* 주축 col, 교차축 row */
+      align-items: stretch; /* 기본값 */
+      align-items: flex-start; 
+      align-items: flex-end;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <a href="https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">Flexbox</a></h1>
+
+  <h2>flex6_align-items</h2>
+  <div class="wrapper" id="container1"><!-- flex-container -->
+    <div class="item item1">item1</div><!-- flex-item -->
+    <div class="item item2">item2</div><!-- flex-item -->
+    <div class="item item3">item3</div><!-- flex-item -->
+  </div>
+  <div class="wrapper" id="container2">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>  
+  </div>
+  <img src="./flex.png" alt="flex 구조">
+</body>
+</html>

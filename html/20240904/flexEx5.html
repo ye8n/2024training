@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx5</title> 
+<!-- 수업 파일 참고해서 수정하기 -->
+<!-- 수정 완료 -->
+
+<style>
+  h1{
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  form .container{
+    border: 3px solid #000;
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form .container li{/* flex-container */
+    display: flex;
+    margin: 6px 0;
+
+    text-align: right;
+  }
+
+  form .container li label{ /* flex-item : inline이 아님. flex의 성격을 가짐 (width, height 적용이 가능해짐) */
+    background-color: #9dbdff;
+    width: 10rem;/* label은 인라인 값이므로 그냥 사용하면 적용이 되지 않음 */
+    /* display: block; : flex가 되었기 때문에 주석을 처리해도 ㄱㅊ */
+
+    padding: 6px 4px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* 두 줄 이상, 텍스트 가운데 정렬 */
+  }
+
+  form .container li input[type=text]{/* flex=item */
+    padding: 6px 4px;
+    outline: none;
+    margin-left: 6px;
+    width: 12rem;
+    border: 1px solid #000;
+  } 
+
+  form .container li input[type=text]::placeholder{
+    color: #9dbdff;
+  }
+
+  #flex3, #flex4, #flex5{
+    height: 5rem;
+  }
+</style>
+</head>
+<body>
+  <h1>각 폼 제목의 세로 중앙 정렬</h1>
+  <form>
+    <ul class="container">
+      <!-- li*5>label[for="flex$"]{채널 키워드}+input#flex$ -->
+      <li>
+        <label for="flex1">채널 키워드</label><input type="text" id="flex1" placeholder="플렉스 적용하기" autofocus></li>
+      <li>
+        <label for="flex2">채널 키워드</label><input type="text" id="flex2" placeholder="플렉스 적용하기"></li>
+      <li>
+        <label for="flex3">채널 키워드 채널 키워드</label><input type="text" id="flex3" placeholder="플렉스 적용하기"></li>
+      <li>
+        <label for="flex4">채널 키워드 channel keyword</label><input type="text" id="flex4" placeholder="플렉스 적용하기"></li>
+      <li>
+        <label for="flex5">channel keyword 채널 키워드</label><input type="text" id="flex5" placeholder="플렉스 적용하기"></li>
+
+    </ul>
+  </form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx9</title>
+<!-- https://codepen.io/witblog/pen/LJrPoq -->
+ <!-- 
+ul: channel_list
+li: item
+img: thumb? image?
+span title
+ -->
+<style>
+  body{
+    text-align: center;   
+    /* flex-flow: nowrap; */
+  }
+
+  body .gallery{
+    padding: 0;
+    display: flex;
+    flex-flow: wrap;
+
+    border: 1px solid #000;
+
+    width: 60%;
+    margin: 0 auto;
+
+    justify-content: space-evenly;
+    justify-content: space-evenly;
+
+
+    
+  }
+  body .gallery li{
+    list-style: none;
+
+    /* flex-basis: 33.3%; */
+
+    /* 여기부터 코드 카피 */
+    display: flex;
+    flex-direction: column;
+    
+    
+
+
+  }
+  body .gallery li img{
+    vertical-align: text-bottom;
+
+  }
+  body .gallery li span{
+    background-color: #212121; color: #fff;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <h1>가로 세로 비율을 유지하는 반응형 박스</h1>
+  <ul class="gallery">
+    <li><img src="https://placehold.co/300x200/3FA2F6/fff?text=img1" alt="#"><span>title1</span></li>
+    <li><img src="https://placehold.co/300x200/68D2E8/fff?text=img1" alt="#"><span>title2</span></li>
+    <li><img src="https://placehold.co/300x200/8B93FF/fff?text=img1" alt="#"><span>title3</span></li>
+    <li><img src="https://placehold.co/300x200/FBA834/fff?text=img1" alt="#"><span>title4</span></li>
+    <li><img src="https://placehold.co/300x200/E8C872/fff?text=img1" alt="#"><span>title5</span></li>
+    <li><img src="https://placehold.co/300x200/E6B9DE/fff?text=img1" alt="#"><span>title6</span></li>
+  </ul>
+</body>
+</html>

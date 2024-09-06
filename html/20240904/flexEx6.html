@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexEx6</title>
+<style>
+  body{
+    font-family: '나눔고딕', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  header{background-color: #d1f2ff;
+  color: #fff;
+  display:flex;
+  /* justify-content: space-between; */
+  }
+
+  header h3{
+    margin: 0;
+    width: 10%; height: 60px;
+    background-color: rgb(107, 188, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .header{
+    background-color: #d1f2ff;
+    width: 80%;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    justify-self: flex-start
+  }
+
+  header .header input[type="text"] {
+    outline: none;
+    text-decoration: none;
+    font-family: inherit;
+    border: 1px solid #212121;
+    border-right: none;
+    padding: 6px;
+    /* box-sizing: border-box; */  
+  }
+
+  header .header .button{
+    font-family: inherit;
+    border: 1px solid #212121; 
+    padding: 6px 12px ;
+    cursor: pointer;
+    /* box-sizing: border-box; */
+  }
+
+  header .header .button:hover{
+    background-color: #212121;
+    color: #fff;
+  }
+
+  header .menu{
+    background-color: aliceblue;
+    color: black;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+</style>
+</head>
+<body>
+  <header> <h3>로고</h3>
+
+  <div class="header"><input type="text" placeholder="검색어를 입력하세요" autofocus><button class="button">검색</button>
+  </div>
+
+  <div class="menu">메뉴</div>
+
+</header>
+
+</body>
+</html>
