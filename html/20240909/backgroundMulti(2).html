@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>backgroundMulti(2)</title>
+<style>
+  form{
+    border: 3px solid #000;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 30px;
+    min-width: 300px; /* 최소 크기가 300 */
+    max-width: 500px; /* 최대 크기가 500 */
+
+
+    /*
+    display: flex;
+    flex-flow: column;
+    align-items: center;*/
+
+  }
+
+  form input{
+    width: 80%;
+    display: block; /* input이 인라인이기 때문에 다루기 까다로움. 그래서 block으로 변환*/
+    margin: 10px auto;
+    outline: none;
+    border: 1px solid #000;
+
+    /* 플레이스 홀더에 여백을 주는 방법1 
+    padding: 10px 10px 10px 50px;
+    box-sizing: border-box; */
+    font-size: 1.1rem;
+    border-radius: 30px;
+
+    background: no-repeat 20px 50% / 20px;
+
+    /* 플레이스 홀더에 여백을 주는 방법2  */
+    padding: 10px;
+    text-indent: 40px; /* 들여쓰기. 요소의 실제 크기에 영향을 주지 않음 */
+  }
+
+  /* []: 속성 선택자, input에서 많이 사용함 */
+  form input[name="userName"]{
+    background-image: url(./imgs/user.svg);
+  }
+  form input[name="userEmail"]{
+    background-image: url(./imgs/at.svg);
+  }
+  form input[name="userTel"]{
+    background-image: url(./imgs/address.svg);
+  }
+
+  form input:hover, form input:focus{
+    background-color: rgb(123, 186, 241);
+  }
+
+  form input::placeholder{
+    color: orangered;
+  }
+
+</style>
+</head>
+<body>
+  <form>
+    <input type="text" name="userName" autofocus placeholder="이름을 입력하세요" >
+    <input type="email" name="userEmail" placeholder="이메일을 입력하세요">
+    <input type="tel" name="userTel" placeholder="연락처를 입력하세요">
+  </form>
+</body>
+</html>

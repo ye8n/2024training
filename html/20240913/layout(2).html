@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>layout(2)</title>
+<meta name="description" content="가장 기본적인 웹사이트 연습">
+
+<!-- og -->
+<meta property="og:title" content="layout web">
+<!-- 아래 링크들은 예시임 -->
+<meta property="og:url" content="https://ye8n.github.io/layout.html"> <!-- 깃허브 페이지스 첫페이지 링크 -->
+<meta property="og:img" content="https://yeon.github.in/repository/assets/images/logo.png"> <!-- 깃허브 페이지스 asset > images >logo.png -->
+<meta property="og:description" content="기본 웹사이트 연습">
+<meta property="og:tyle" content="layout web">
+
+
+<!-- favicon -->
+ <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon.ico">
+ <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+ <link rel="manifest" href="./assets/images/site.webmanifest">
+
+<!-- <meta name="theme-color" content="#ffffff"> -->
+
+<!-- style -->
+ <!-- 초기화를 위한 reset.css 연결 -->
+  <link rel="stylesheet" href="./styles/minireset.min.css">
+ <!-- 웹폰트 설정  -->
+  <link rel="stylesheet" href="./styles/font.css">
+  <!-- 내가 작성한 css -->
+  <link rel="stylesheet" href="./layout(2).css">
+
+</head>
+<body>
+  <main> <!--body 다음으로 제일 큰 태그, 한 페이지에서 한 번만-->
+
+  <!-- header 영역 -->
+  <header>
+    <h1><em>kim's kitchen</em> cooking class</h1>
+    <!-- 메뉴 -->
+    <ul class="global-menu">
+      <li><a href="#">홈</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="#">교실</a></li>
+      <li><a href="#">케이터링</a></li>
+      <li><a href="#">contact us</a></li>
+    </ul>
+  </header>
+  <!-- 헤더에 콘텐츠가 많은 경우 <nav></nav> 를 추가로 쓰기도. -->
+
+  <!-- contents 영역 -->
+  <div class="contents">
+    <article>
+      <figure>
+        <img src="./assets/images/bok-choi.jpg" alt="oriental salad">
+        <figcaption>oriental salad</figcaption>
+      </figure>
+      <div class="txt-wrapper">
+        <h2>채식주의자</h2>
+        <h3>런던에서의 5주 코스</h3>
+        <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
+      </div>
+
+      <figure>
+        <img src="./assets/images/teriyaki.jpg" alt="teriyaki">
+        <figcaption>teriyaki</figcaption>
+      </figure>
+      <div class="txt-wrapper">
+        <h2>소스 마스터클래스</h2>
+        <h3>1일 워크샵</h3>
+        <p>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</p>
+      </div>
+    </article>
+
+    <aside>
+      <h2>인기 요리법</h2>
+      <ul class="recipe">
+        <li><a href="#">동그랑땡</a></li>
+        <li><a href="#">육전</a></li>
+        <li><a href="#">산전</a></li>
+        <li><a href="#">송편</a></li>
+      </ul>
+      <h2>연락처</h2>
+      <address>경기 수원시 팔달구 매산동</address>
+    </aside>
+  </div>
+
+  <!-- footer 영역 -->
+  <footer>&copy;©백종원네</footer> 
+</main>
+</body>
+</html>

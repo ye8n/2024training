@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* setting */
+.padding_10{padding: 10px;}
+.padding_20{padding: 20px;}
+.padding_30{padding: 30px;}
+
+.margin_10{margin: 10px;}
+.margin_20{margin: 20px;}
+.margin_30{margin: 30px;}
+
+.flex{display: flex;}
+.flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+.line_height_sm{line-height: 1.2;}
+.line_height_md{line-height: 1.5;}
+.line_height_lg{line-height: 2.0;}
+
+body{
+  font-family: '나눔고딕', sans-serif;
+  width: 962px; 
+  margin: 30px auto;
+
+  background-image: url(./wood\ texture.jpg);
+}
+
+/* header */
+header{ background-color: #7D1E6A; color: #fff;}
+header .logo img{
+  width: 90px; height: 90px;
+  vertical-align: top;
+}
+header .title{
+  padding: 10px;
+  flex-direction: column;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+}
+
+/* section */
+section{background-color: #F1EEE9;}
+section .top_menu{background-color: #FFCD38; color: #7D1E6A;
+}
+section .top_menu ul{
+display: flex;
+}
+section .top_menu ul li{
+  width: 100px; height: 50px;
+  text-align: center;
+  line-height: 50px;
+  box-sizing: border-box;
+
+}
+section .top_menu ul li:hover{ cursor: pointer;
+  background-color: #E4010B; color: #fff;
+}
+
+section .main_contents{
+}
+section .main_contents .contents{
+  display: flex; flex-flow: nowrap;
+}
+section .main_contents .contents figure{
+  border: 2px solid orangered; background-color: #fff;
+}
+section .main_contents .contents figure img{
+  width: 285px;
+}
+section .main_contents .contents figure figcaption{
+  padding: 10px;
+  text-align:  end;
+  color: #bbb;
+}
+section .main_contents .contents ul{
+  padding-left: 20px;
+  width: 300px;
+}
+section .main_contents .contents ul li:nth-child(1){
+  font-weight: bold; font-size: 1.7rem;
+}
+section .main_contents .contents ul li:nth-child(2){
+  font-weight: bold; color: #E4010B; font-size: 1.5rem;
+}
+section .main_contents .contents ul li:nth-child(3){color: #777;
+}
+
+/* aside */
+aside{background-color: #fff;
+  width: 300px;
+
+}
+aside .hot{
+}
+aside .hot h4{ font-size: 1.7rem; color: #E4010B; font-weight: bold; 
+margin: 40px 0;}
+
+aside .hot li{ font-size: 1.5rem;
+border-bottom: #E4010B solid 1px;
+padding: 10px;
+height: 30px; line-height: 30px;}
+
+aside .hot li:hover{
+  background-color: #E4010B; color: #fff;
+  cursor: pointer;
+}
+
+aside .address{}
+aside .address h4{ font-size: 1.7rem; color: #E4010B; font-weight: bold;
+margin: 40px 0;}
+aside .address li{ font-size: 1rem; font-weight: bold;
+  padding: 10px;
+}
+
+.pages{
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p{background-color: #7D1E6A; color: #fff;}
+
+

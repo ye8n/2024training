@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="=widthdevice-width, initial-scale=1.0">
+  <title>layout_basic</title>
+  <!-- 초기화 reset.css 모든 css 중 제일 처음에 작성 -->
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./layout_basic.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="space_sm flex_wrap">
+    <!-- 로고 -->
+    <h1 class="logo">
+      <a href="#">로고</a>
+    </h1>
+    <!-- 메뉴 -->
+    <nav>
+      <!-- PC -->
+      <!-- <ul class="global_menu"></ul> -->
+
+      <!-- 모바일 -->
+      <a href="#" class="mobile_menu"><span>모바일메뉴</span></a>
+    </nav>
+  </header>
+
+  <!-- contents -->
+  <div class="contents space_md">
+    <!-- 슬라이드 -->
+    <section class="main_slide flex_wrap">
+      <!-- 
+      <ul>
+        <li><img src="" alt="slide1"></li>
+        <li>slide2(bg)</li>
+        <li>slide3</li>
+        <li>slide4</li>
+      </ul> 
+      -->
+      <h3>better creative</h3>
+      <h2>Art Direction</h2>
+    </section>
+
+    <!-- 인트로 -->
+    <section class="main_intro inner_lg">
+      <ul class="main_intro_list">
+        <li>
+          <h3>Branding</h3>
+          <p>We are a passionate digital design agency that specializes in beautiful and easy-to-use digital</p>
+        </li>
+        <li>
+          <h3>Development</h3>
+          <p>We are a passionate digital design agency that specializes in beautiful and easy-to-use digital</p>
+        </li>
+        <li>
+          <h3>Analysis</h3>
+        </li>
+        <li>
+          <h3>Marketing</h3>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 갤러리 -->
+    <section class="main_gallery inner_lg">
+      <ul class="main_gallery_list">
+        <li>
+          <h3>Branding</h3>
+        </li>
+        <li><h3>Development</h3></li>
+        <li><h3>Analysis</h3></li>
+        <li><h3>Marketing</h3></li>
+        <li><h3>Design</h3></li>
+        <li><h3>Strategy</h3></li>
+      </ul>
+    </section>
+    
+    <!-- 비지니스 -->
+    <section class="main_business inner_lg">
+      <h2>Our Business</h2>
+      <p>We are a passionate digital design agency that specializes</p>
+
+      <div class="main_business_list">
+        <figure>
+          <img src="https://placehold.co/314x340" alt="img1">
+          <figcaption>
+            <strong>title1</strong>
+            <span>This theme does everything you could possibly</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/314x340" alt="img2">
+          <figcaption>
+            <strong>title2</strong>
+            <span>This theme does everything you could possibly</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/314x340" alt="img3">
+          <figcaption>
+            <strong>title3</strong>
+            <span>This theme does everything you could possibly</span>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="https://placehold.co/314x340" alt="img4">
+          <figcaption>
+            <strong>title4</strong>
+            <span>This theme does everything you could possibly</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    
+    <!-- 유투브 -->
+    <section class="main_youtube inner_lg">
+      <h2>Our Youtube</h2>
+      <p>In an ideal world this text wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts. Needless to say it’s very important, content is king an</p>
+      <div class="main_youtube_box"></div>
+    </section>
+
+    <!-- 서비스 -->
+    <section class="main_service inner_lg flex_wrap">
+      <h2>Our Service</h2>
+      <ul class="main_service_gallery">
+        <li>
+          <img src="https://placehold.co/300x260" alt="img1">
+          <h3>title1</h3>
+          <p>Lorem ipsum dolor sit</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 협찬사 -->
+    <section class="main_brand inner_lg">
+      <ul class="main_brand_list flex_wrap">
+        <li>brand01</li>
+        <li>brand02</li>
+        <li>brand03</li>
+        <li>brand04</li>
+        <li>brand05</li>
+        <li>brand06</li>
+        <li>brand07</li>
+        <li>brand08</li>
+        <li>brand09</li>
+        <li>brand10</li>
+        <li>brand11</li>
+        <li>brand12</li>
+      </ul>
+    </section>
+
+    <!-- 로케이션 -->
+    <section class="main_location inner_lg">
+      <h2>Location</h2>
+      <ul class="main_location_list">
+        <li>
+          <h3>office</h3>
+          <div class="location_map"></div>
+          <ul class="location_office_address">
+            <li><strong>address</strong></li>
+            <li><strong>tel</strong></li>
+            <li><strong>fax</strong></li>
+            <li><strong>sub</strong></li>
+            <li><strong>bus</strong></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 컨텍트어스 -->
+    <section class="main_contact inner_lg">
+      <h2>Let's talk</h2>
+      <p>Herb multiply also earth one you’ll a wherein form creatur</p>
+      <a href="#">contact us</a>
+    </section>
+  </div>
+
+  <!-- footer -->
+  <footer class="space_md inner_lg">
+    <section class="footer_info">
+      <h2 class="footer_logo">로고</h2>
+      <div class="footer_info_list">
+        <h3>Contact</h3>
+        <p>02 1234 5678</p>
+      </div>
+      <div class="footer_info_list">
+        <h3>Location</h3>
+        <p>795 Folsom Ave, Suite 600</p>
+      </div>
+      <div class="footer_info_list">
+        <h3>Social</h3>
+        <p>sns</p>
+      </div>
+    </section>
+    <section class="footer_copyright space_md">
+      <p>Copyrights © 2020 All Rights Reserved by DYAMI.</p>
+    </section>
+  </footer>
+</body>
+</html>

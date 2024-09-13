@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+.space_lg {
+  padding: 30px;
+}
+.space_md {
+  padding: 20px;
+}
+.space_sm {
+  padding: 10px
+}
+.inner_lg {
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.flex_wrap {
+  display: flex;
+}
+
+
+body {
+  line-height: 1.6;
+}
+
+/**** header ****/
+header {
+  background-color: #D1E9F6;
+  justify-content: space-between;
+  text-align: center;
+  font-weight: bold;
+}
+header .logo {
+  background-color: orange;
+  width: 100px; height: 50px;
+}
+header nav {
+  background-color: orange;
+  width: 50px;
+}
+/**** contents ****/
+.contents {
+  background-color: #F1D3CE;
+}
+
+/* main_slide */
+.contents .main_slide {
+  background: url(https://placehold.co/360x600/A02334/fff) no-repeat 50% / cover;
+  width: 100%;
+  height: 80vh;
+
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 3rem;
+  color:gold;
+  line-height: 1;
+}
+
+/* main_intro */
+.contents .main_intro .main_intro_list li {
+  padding: 10px;
+}
+.contents .main_intro .main_intro_list li:nth-child(1) { background-color: #4379F2; }
+.contents .main_intro .main_intro_list li:nth-child(2) { background-color: #FFEB00; }
+.contents .main_intro .main_intro_list li:nth-child(3) { background-color: #6EC207; }
+.contents .main_intro .main_intro_list li:nth-child(4) { background-color: #117554; }
+
+/* main_gallery */
+.contents .main_gallery {}
+.contents .main_gallery .main_gallery_list {}
+.contents .main_gallery .main_gallery_list li {
+  height: 300px;
+  background: no-repeat 50% / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.contents .main_gallery .main_gallery_list li:nth-child(1) { background-image: url(https://placehold.co/390x200/7695FF/fff);
+}
+.contents .main_gallery .main_gallery_list li:nth-child(2) { background-image: url(https://placehold.co/390x200/9DBDFF/fff);
+}
+.contents .main_gallery .main_gallery_list li:nth-child(3) { background-image: url(https://placehold.co/390x200/7C93C3/fff);
+}
+.contents .main_gallery .main_gallery_list li:nth-child(4) { background-image: url(https://placehold.co/390x200/FF9874/fff);
+}
+.contents .main_gallery .main_gallery_list li:nth-child(5) { background-image: url(https://placehold.co/390x200/F05A7E/fff);
+}
+.contents .main_gallery .main_gallery_list li:nth-child(6) { background-image: url(https://placehold.co/390x200/125B9A/fff);
+}
+/* main_business */
+.contents .main_business {
+  background-color: #eee;
+  text-align: center;
+}
+.contents .main_business .main_business_list figure strong {
+  display: block;
+  font-weight: bold;
+}
+.contents .main_youtube {
+  background-color: #C1D8C3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contents .main_youtube p {
+  width: 90%;
+  margin: 10px;
+}
+.contents .main_youtube .main_youtube_box {
+  background-color: #fff;
+  width: 90%; height: 300px;
+}
+.contents .main_service {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.contents .main_brand {
+  background-color: #eee;
+}
+.contents .main_brand .main_brand_list {
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.contents .main_brand .main_brand_list li {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  /* flex-grow: 1; */
+  width: 33.3333%;
+  box-sizing: border-box;
+}
+
+/* main_location */
+.contents .main_location {}
+
+.contents .main_location h2{
+  text-align: center;
+}
+.contents .main_location .location_map{
+  background-color: #fff;
+  width: 100%; height: 500px;
+  border: 1px solid #000;
+}
+.contents .main_location .location_office_address li{
+  border-bottom: 1px solid #000;
+  padding: 5px;
+}
+
+/* main_contact */
+.contents .main_contact{
+  text-align: center;
+  background-color: #EECAD5;
+}
+
+/**** footer ****/
+footer {
+  background-color: #EECAD5;
+}
+
+footer .footer_info{
+  background: #ccd5ae;
+}
+
+footer .footer_info .footer_info_list{
+  background: #ddd;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+footer .footer_copyright{
+  background-color: #e0e58b;
+}

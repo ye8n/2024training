@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+/* 세팅값 */
+.padding_lg {padding: 30px;}
+.padding_md {padding: 20px;}
+.padding_sm {padding: 10px;}
+
+.padding_top{padding-top: 40px}
+
+.margin_lg {margin: 30px;}
+.margin_md {margin: 20px;}
+.margin_sm {margin: 10px;}
+
+.flex_wrap{
+  display: flex;
+}
+
+.borderBox{
+box-sizing: border-box;
+}
+
+.buttonB{
+  border-radius: 30px; width: 60px; display: inline-block;
+  color: #fff; background: #000; text-align: center; padding: 2px;
+}
+
+.buttonW{
+  border-radius: 30px; text-align: center; padding: 2px;
+  width: 80px; color: #000; background: #fff; border: 1px solid #000;
+  display: inline-block;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+}
+
+/* 초기화 */
+ul{list-style: none; padding: 0; margin: 0;}
+li{padding: 0; margin: 0;}
+a{text-decoration: none; color: #000;}
+img{vertical-align: top;}
+
+/*  */
+h3 { font-size: 40px; padding: 0; margin: 0; }
+h4{margin: 0;   padding: 0; font-size: 30px;}
+
+/* 기본 세팅 끝 */
+
+body{
+  font-family: 'NotoSansKR', 'NanumBarunGothicYetHangul';
+}
+
+header{ background-color: rgb(255, 212, 212);
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  height: 70px;
+}
+header h1{ background-color: rgb(255, 163, 163);
+  width: 200px;
+}
+header .header_icons{background-color: #fcfcfc;
+  display: flex;
+}
+header .header_icons a{
+  margin: 5px;
+  display: block;
+}
+
+header .header_icons a:hover{
+  background-color: rgb(155, 227, 252); color: #fff;
+}
+
+.section1 {background-color: #fff3f3;}
+
+.section2 {background-color: #e1f4f5;}
+.section2 p{background-color: #b9e4e7;}
+.section2 a{margin: 40px 0px 20px 0px; display: inline-block;
+border-bottom: 1px solid #000;}
+
+.section3 {background-color: #d1e5ff;}
+.section3 .sectionTitle{background-color: #a4cafc;
+display: flex;
+justify-content: space-between;}
+.section3 .sectionTitle h4{
+  height: 60px;
+
+}
+.section3 .sectionTitle a{
+  line-height: 40px;
+  text-decoration: underline;
+}
+
+.section3 .section3Contents{
+  background-color: #7baceb;
+}
+
+
+
+.section3 .section3Contents li{
+    padding: 20px 0;
+    display: flex; flex-flow: column;
+    border-bottom: 1px solid #000;
+    margin: 22px;
+    background-color: #5f8adb;
+  }
+
+  .section3 .section3Contents li .date{
+    background: #ecf7ff;
+  }
+
+
+  .section4 {
+    background: rgb(229, 202, 241);
+  }
+
+  .section4 p{
+    background: #bf9dce;
+  }
+  
+  .section4 .section4Img{
+    display: flex; flex-flow: column;
+    justify-content: center;
+    background: #fff;
+  }
+
+.section5 {background-color: rgb(251, 255, 196);}
+.section5 .section5Title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section5 img{
+  display: block;
+  margin: 0 auto;
+}
+
+.section6{background: #fdb687;}
+.section6 .section6Title{
+  display: flex;
+  justify-content: space-between;
+  }
+
+  .section6 .section6Title {
+    padding-bottom: 20px; border-bottom:3px solid #ff6600;
+  }
+  .section6 .sectionTitle a{
+    text-decoration: underline;}
+
+  .section6 ul{
+    background: #f8ddcb;
+    padding: 20px 0;
+  }
+  
+  .section6 ul li{
+    padding: 10px 0;
+    /* background: #fff; */
+    border-bottom: 1px solid #e65c00;    } 
+
+
+  .section7 {background: #6d655d;
+    
+  }
+
+  .section7 h4{
+    padding-bottom: 40px;
+  }
+
+  .section7 img{
+    display: block;
+    /* flex-grow: 1; */
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  footer{
+    background-color: #383838;
+    color: #ccc;
+  }
+
+  footer h2{
+    display: block;
+    margin: 0 0 20px 0;
+    text-align: center; height: 40px;
+  }
+  footer ul{
+    /* background-color: #fff; */
+    display: flex; flex-flow: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 2px;
+    margin: 6px;
+    
+  }
+  footer ul li a{
+    display: block;
+    padding: 4px;
+
+    font-size: 14px;
+    color: #fff;
+
+  }
+
+  footer address{
+    margin: 20px 0;
+    font-style: normal;
+    font-size: 14px;
+  }
+
+  footer p{background: #252525;
+    padding: 10px;
+  color: #fff;
+height: 48; vertical-align: 48px; box-sizing: border-box; width: 300px; margin: 0 auto;}
+
+footer span{ background: #525252;
+  display: block;
+  text-align: center;
+  margin: 40px 0;
+}
+
+
+
+/* hover 이벤트 */
+
+footer .footerNav:hover{
+  cursor: pointer;
+}
+
+.listButton:hover{
+  cursor: pointer;
+}
+
+.section5 p:hover{
+  cursor: pointer;
+}

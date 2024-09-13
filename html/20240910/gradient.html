@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>gradient</title>
+<style>
+  h1{
+    text-align: center;
+  }
+  .container{
+    list-style: none;
+    padding: 0; margin: 30px auto;
+    background-color: #ddd;
+    font-weight: bold; font-size: 1.3rem;
+    overflow: hidden;     /* 마진 상쇄현상 해결을 위해 부모 요소에 오버플로우 히든을 적용. 컨텐츠가 넘치는 경우엔 사용할 수 없어서 다른방법(플렉스 등)으로 흐름을 바꿔야? */
+  }
+
+  .container .box{
+    margin: 30px auto;
+    border: 3px solid #000;
+    width: 80%;
+    min-width: 400px; height: 200px;
+    
+  }
+
+  /* 0910에 이어서-- */
+  .box1{
+    background-image: linear-gradient(orange, orangered) 
+  }
+
+  .box2{ /* to bottom : 아래로 떨어지는 그라디언트. 기본값. */
+    background-image: linear-gradient(to bottom, gold, red);
+    background-image: linear-gradient(to top, gold, red);
+    background-image: linear-gradient(to right, gold, red);
+    background-image: linear-gradient(to left, gold, red);
+  }
+
+  .box3{
+    background-image: linear-gradient(to right bottom, rgba(79,117,255, .5), #571e9c);
+
+    /* 각도의 단위값0 */
+    background-image: linear-gradient(-125deg, rgba(79,117,255, .5), #571e9c);
+  }
+
+  .box4{
+    background-image: linear-gradient(90deg, #ff885b 40%, #bf2ef0 80%, #1230ae 95%);
+  }
+
+  .box5{
+    background-image: linear-gradient(45deg, transparent 50%, navy);
+  }
+
+  .box6{
+    background-image: linear-gradient(-45deg, rgba(191, 46, 240,0.4) , rgba(237, 62, 247,0.5)),  linear-gradient(45deg, rgba(118, 149, 255,0.7), #125B9A);
+  
+  }
+
+  .box7{ /* 30px 만큼 그라디에이터 반복 */
+    background-image: repeating-linear-gradient(#ffbe98 0, #f05a7e 30px);
+  }
+
+  .box8{ /* 10%만큼 반복 */
+    background-image: repeating-linear-gradient(#fabc3f 0, #e85c0d 10%);
+    /* 줄무늬 패턴처럼 사용. 0~10만큼 노랑, 10에서 20만큼 주황. 이 전체가 반복 */
+    background-image: repeating-linear-gradient(#fabc3f 0, #fabc3f 10%, #e85c0d 10%, #e85c0d 20%);
+  }
+
+  .box9{
+    background-image: repeating-linear-gradient(90deg, #a02334 0 , #a02334 30px, #e85c04 30px, #ffad60 40px, #ffeead 40px, #ffeead 60px);
+  }
+
+  .radial1{ 
+    background-image: radial-gradient(lightblue, rgb(37, 95, 143));
+  } /* 기본값은 원형 그라디언트 모양이 박스 크기의 영향을 받는 듯? */
+
+  .radial2{ /* circle 영역의 비율과 상관없이, 정원의 형태로 그라디언트 생성 */
+    background-image: radial-gradient(circle, lightblue 10%, teal 70%);
+  }
+
+  .radial3{
+    background-image: repeating-radial-gradient(circle, #ffb343 0, #ffb343 30px, #96ceb4 30px, #96ceb4 60px);
+  }
+  h2{margin: 0;}
+</style>
+</head>
+<body>
+  <h2>선형 그라디언트</h2>
+  <!-- ul.container>li.box.box$*5{background-image: linear-gradient(색상1, 색상2)} -->
+  <ul class="container">
+    <li class="box box1">background-image: linear-gradient(색상1, 색상2)</li>
+    <li class="box box2">background-image: linear-gradient(방향, 색상1, 색상2)</li>
+    <li class="box box3">background-image: linear-gradient(방향, 색상1, 색상2)</li>
+    <li class="box box4">background-image: linear-gradient(색상1, 색상2, 색상3, 색상4)</li>
+    <li class="box box5">background-image: linear-gradient(투명, 1색상)</li>
+
+    <li class="box box6">중첩</li>
+    <li class="box box7">background-image: repeating-linear-gradient()</li>
+    <li class="box box8">background-image: repeating-linear-gradient()</li>
+    <li class="box box9">background-image: repeating-linear-gradient()</li>
+  </ul>
+
+  <h2>원형 그라디언트 </h2>
+  <ul class="container">
+    <li class="box radial1">radial-gradient(1색상, 2색상)</li>
+    <li class="box radial2">radial-gradient(circle, 1색상, 2색상)</li>
+    <li class="box radial3">repeating-radial-gradient(1색상, 2색상)</li>
+  </ul>
+  
+</body>
+</html>

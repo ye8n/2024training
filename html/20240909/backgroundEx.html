@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>backgroundEx</title>
+<style>
+  ul{
+    list-style: none;
+    padding: 0; margin: 0 auto;
+    width: 60%;
+    border: 3px solid #000;
+    border-radius: 30px;
+    color: orange;
+  }
+
+  ul li{
+    width: 50%; 
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 1rem; margin: 1rem auto;
+
+    display: flex;
+  }
+
+  ul span{
+    width: 25px; height: 25px;
+    padding-right: 10px;
+    }
+
+  ul .name{
+    background: url(./imgs/user-solid.svg) no-repeat left;
+  }
+
+  ul .email{
+    background: url(./imgs/at-solid.svg) no-repeat left;
+  }
+
+  ul .adress{
+    background: url(./imgs/address-card-solid.svg) no-repeat left;
+  }
+
+  ul li input{
+    border: 0;
+    font-family: inherit;
+    outline: 0; font-size: inherit;
+  }
+
+  ::placeholder{
+    color: orange;
+  }
+
+
+</style>
+</head>
+<body>
+  <ul>
+    <li><span class="name"></span><input type="text" placeholder="이름을 입력하세요"></li>
+    <li><span class="email"></span> <input type="email" placeholder="이메일을 입력하세요"></li>
+    <li><span class="adress"></span><input type="text" placeholder="연락처를 입력하세요"> </li>
+  </ul>
+</body>
+</html>

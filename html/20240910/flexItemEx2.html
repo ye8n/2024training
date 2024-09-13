@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>flexItemEx2</title>
+<style>
+  body{ background-color: #ddd; }
+
+  .wrapper{
+    width: 90vw;
+    margin: 50px auto;
+  }
+
+  .wrapper .box{
+    list-style: none;
+    padding: 0; margin: 0;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+
+    display: flex; flex-wrap: wrap;
+
+   
+
+  }
+
+  .wrapper .box li{
+    background-color: #fff;
+    padding: 10px 30px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+
+    /* width: 100%; /* 나를 감싸고 있는 부모를 기준으로 전체를 고정값만큼 채움. 요소에 영향을 줌. */
+    flex-grow: 1; /* 플렉스 컨테이너 영역을 유연하게 다 채움. 반응형에 사용. */
+  }
+
+  .wrapper .box li:hover{
+    background-color: #ca5757;
+  }
+
+
+  /*
+  .box{
+    list-style: none;
+    margin: 0 auto; padding: 0;
+    width: 90%;
+
+    display: flex; flex-wrap: wrap;
+  }
+
+  li{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    flex-grow: 1;
+  }*/
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="box">
+      <li>이름을 하게 한창은 소중하자 있으라 </li>
+      <li>하늘에는 새는 정확하니 지금 놓은</li>
+      <li>프랑시스 중 관계를 재료보다</li>
+      <li>옥 필요할 웬걸 바다는 별의 무엇이자 의견이 주다</li>
+      <li>된 계몽만 치 생깁니다</li>
+      <li>수사력을 뒤로한 둘러대도록 없은 것 이미지도</li>
+      <li>이름을 있지</li>
+      <li>잠 곤란하지 실수를 되어 총각에 관계는 우리의 되어요</li>
+      <li>무성한 모양, 관료화하고 문화 획연히</li>
+      <li>어머님 아련히 평교사를 차다 넘고, 장치도 계몽됩니다 볼까</li>
+      <li>돌 위에 패는가 상황에 어떠한 생각한 두어</li>
+      <li>청춘이 우는 이름을 잠 까닭입니다</li>
+    </ul>
+  </div>
+</body>
+</html>
