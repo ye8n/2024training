@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* footer.css */
+
+/*** footer ***/
+main footer {
+  background: #102c57; color: #fff;
+  font-size: 14px;
+  height: 35px; line-height: 35px;
+  padding-left: 20px;
+}

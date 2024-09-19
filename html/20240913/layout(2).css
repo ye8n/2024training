@@ -35,18 +35,129 @@ main header h1{
   background: #102c57 url(./assets/images/logo.png) no-repeat 25px 50% / 90px; /* 반복안함 / x축위치 y축 위치 / 이미지 사이즈*/
   color: #fff;
   height: 130px;
+  
+  /* text-indent: -9999px; */ /* 왼쪽 방향으로 내보내기
+  opacity: 0; 
+  user-select: none; 특정 부분 텍스트 제어. none: 텍스트 드래그 안 됨 */
+  
+  padding: 30px 0 0 130px;
+  /* display: flex; flex-flow: column; justify-content: center; */
+  
 }
 main header h1 em{
   font-family: 'Pacifico', cursive; /* 폴백fallback 폰트 설정해야 함 */
   display: block; /* 간편한 줄바꿈 방식 */
   line-height: 1;
   font-size: 2.1rem;
+
+  
 }
-main header .global-menu{}
+main header .global-menu{
+  display: flex;
+  background-color: #f5f5f5;
+  font-weight: 500;
+}
 main header .global-menu li {}
-main header .global-menu li a{}
+main header .global-menu li a{
+  display: block;
+  width: 130px; height: 46px;
+  line-height: 46px;
+  text-align: center;
+}
+
+main header .global-menu li a:hover{
+  background-color: orange;
+}
 
 /*** contents ***/
+main .contents {
+  display: flex;
+}
+main .contents article{ /* flex-item */ /* figure의 flex-container*/
+  background-color: #e5d9f2;
+  /*
+  width: 648px; /* box-sizing을 상속 받았기 때문에, 실제 컨텐츠가 들어갈 수 있는 width값은 648-p40=608 */
+  width: 69.5278%; /* (648 / 932(box-sizing 적용되었기 때문에) * 100% ); */
+  width: 69.5278%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 30px 20px ;
+}
+main .contents article figure{ /* width: img290 + b2 + p16 + m20 = 328px*/
+  font-style: italic;
+  font-style: oblique; /* 이텔리과 동일한 결과값*/
+  font-size: 14px;
+  border: 1px solid #102c57;
+  background-color: #fff;
+  padding: 8px;
+  text-align: right;
+
+  margin: 0 20px 40px  0;
+}
+
+main .contents article figure figcaption{
+  /* background-color: tan;   */
+  /* line-height: 40px; */
+  margin-top: 8px;
+}
+
+main .contents article .txt-wrapper{
+  background-color: lightblue;
+  /* width: 279px; */
+  width: calc(607.98px - 308px - 20px);
+  padding-top: 5px;
+}
+
+main .contents article .txt-wrapper h2{
+  font-weight: 700;
+  font-size: 1.6rem;
+
+}
+
+main .contents article .txt-wrapper h3{
+  font-weight: 500;
+  color: #e4010b;
+  margin: 5px 0;
+
+
+}
+
+main .contents aside{
+  background-color: #d2e0fb;
+  /* width: 30.4722%; */
+  flex-grow: 1;
+}
+
+main .contents aside h2{
+  color: #e4010b;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 30px 20px;
+}
+main .contents aside .recipe{}
+
+
+main .contents aside .recipe a{
+  display: block;
+  border-bottom: 1px solid #e4010b;
+  font-size: 1.3rem;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 20px;
+}
+
+main .contents aside .recipe a:hover{
+  background-color: #e4010b;
+  color: #fff;
+}
+
+main .contents aside address{
+  font-style: normal;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
 
 /*** footer ***/
