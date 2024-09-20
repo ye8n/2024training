@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx3</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* menu */
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .menu {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+
+      position: fixed;
+      left: 30%;
+
+
+    }
+
+    .menu li:nth-child(1) {
+      background-color: lightblue;
+    }
+
+    .menu li:nth-child(2) {
+      background-color: #fff;
+    }
+
+    .menu li:nth-child(3) {
+      background-color: aliceblue;
+    }
+
+    .menu li:nth-child(4) {
+      background-color: rgb(108, 146, 108);
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      width: 100px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      display: block;
+    }
+
+
+    /* contens */
+    .contents {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      line-height: 900px;
+    }
+
+    .contents li:nth-child(1) {
+      height: 100vh;
+      background-color: lightblue;
+    }
+
+    .contents li:nth-child(2) {
+      height: 100vh;
+      background-color: #fff;
+    }
+
+    .contents li:nth-child(3) {
+      height: 100vh;
+      background-color: aliceblue;
+    }
+
+    .contents li:nth-child(4) {
+      height: 100vh;
+      background-color: rgb(108, 146, 108);
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="menu">
+    <li> <a href="#Box1">Box1</a></li>
+    <li> <a href="#Box2">Box2</a></li>
+    <li> <a href="#Box3">Box3</a></li>
+    <li> <a href="#Box4">Box4</a></li>
+  </ul>
+  <ul class="contents">
+    <li id="Box1">Box1</li>
+    <li id="Box2">Box2</li>
+    <li id="Box3">Box3</li>
+    <li id="Box4">Box4</li>
+  </ul>
+</body>
+
+</html>

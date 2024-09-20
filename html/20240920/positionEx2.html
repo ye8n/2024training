@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx2</title>
+  <style>
+    html{
+      /* 부드로운 스크롤 */
+      scroll-behavior: smooth;
+    }
+
+
+    ::selection{/* 문서를 드래그 했을 때, 앞에 선택자 없으면 전체에 적용*/
+      background-color: #5082ee;
+      color: #fff;
+    }
+
+
+    p{
+      font-size: 1.2rem;
+      width: 70vw;
+      line-height: 1.5;
+    }
+
+
+    .blank{
+      height: 300vh;
+    }
+    
+    em{
+      font-style: normal;
+      color: #fff; background-color: rgb(255, 124, 76);
+    }
+
+    .btn{
+      color: inherit;
+      text-decoration: none; color: #fff;
+      background-color: rgba(138, 43, 226, 0.7);
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 120px;
+      font-weight: bold;
+      font-size: 2rem;
+
+      position: fixed; /* 인라인 요소도 fixed와 absolute 값을 가지면 다른 흐름을 가지게 되며 가로·세로값을 인식(=적용됨) */
+      right: 5%; bottom: 5%;
+    }
+
+    .btn:hover{
+      background-color: rgba(138, 43, 226, 1.0);
+      bottom: 6%;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>positionEx2</h2>
+  <p>fixed 값을 사용하는 요소 역시 absolute 값을 사용하는 요소처럼 문서 흐름과는 상관 없이 좌표로 위치를 결정하지만, 기준이 되는 요소가 <em>부모 요소가 아니라 브라우저가 기준</em>이 된다.</p>
+  <p>한번 배치되면 fixed라는 이름처럼 브라우저 창을 스크롤하더라도 계속 고정되어 표시된다.</p>
+  <div class="blank"></div>
+  <a href="#" class="btn">위로</a>
+</body>
+</html>

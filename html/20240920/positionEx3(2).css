@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'SpoqaHanSans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 돋움, sans-serif ;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* menu */
+.gnb {
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  left: 0; right: 0; /* absolute,fixed 좌우 중앙 정렬 */
+  margin: auto;
+
+  box-shadow: 
+  0px 2.3px 2.2px rgba(0, 0, 0, 0.02),
+  0px 5.5px 5.3px rgba(0, 0, 0, 0.028),
+  0px 10.3px 10px rgba(0, 0, 0, 0.035),
+  0px 18.3px 17.9px rgba(0, 0, 0, 0.042),
+  0px 34.3px 33.4px rgba(0, 0, 0, 0.05),
+  0px 82px 80px rgba(0, 0, 0, 0.07);
+
+  width: 60%;
+
+
+}
+
+.gnb li{
+  /* width: 20%; */
+  flex-grow: 1;
+}
+
+.gnb li a {
+  display: block;
+}
+
+.gnb li:nth-child(1) a, #page1{ background-color: #7695ff; }
+.gnb li:nth-child(2) a, #page2{ background-color: #9dbdff; }
+.gnb li:nth-child(3) a, #page3{ background-color: #ffd7c4; }
+.gnb li:nth-child(4) a, #page4{ background-color: #ff9874; }
+.gnb li:nth-child(5) a, #page5{ background-color: #f05a7e; }
+.gnb li:hover a {color: #fff;}
+
+/* article */
+.box {
+  font-size: 2rem;
+  font-weight: 700;
+  height: 100vh;
+  padding-top: 150px;}

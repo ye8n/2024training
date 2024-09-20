@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx1</title>
+  <style>
+    .container {
+      list-style: none;
+      padding: 0;
+      background-color: #4379F2;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+
+      width: 500px; height: 500px;
+      margin: 50px auto;
+
+      position: relative; /* 위치값을 쓰지 않으면, 일반적인 흐름을 가져서 기준으로 많이 사용 */
+    }
+    .container .box {
+      background-color: #FF6600;
+      width: 50px; height: 50px;
+      line-height: 50px;
+
+      position: absolute;
+    }
+
+    .container .box1 {
+      top: 0; left: 0;
+    }
+    .container .box2 {
+      top: 0; right: 0;
+    }
+    .container .box3 {
+      bottom: 0; left: 0;
+    }
+    .container .box4 {
+      bottom: 0; right: 0;
+    }
+    .container .box5 {
+      /* 가운데 정렬을 위해, 옛날에 사용하던 방식*/
+      /*
+      top: 50%; left: 50%;
+      margin-top: -25px; margin-left: -25px;
+      */
+
+      /* 단, 부모 요소의 높이 값이 있어야만 세로 중앙 정렬 가능 */
+      top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto;
+    }
+
+
+    
+
+  </style>
+</head>
+<body>
+  <ul class="container">
+    <li class="box box1">1</li>
+    <li class="box box2">2</li>
+    <li class="box box3">3</li>
+    <li class="box box4">4</li>
+    <li class="box box5">5</li>
+  </ul>
+</body>
+</html>
