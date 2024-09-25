@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>가변비디오</title>
+  <style>
+    video{
+      background: orange;
+      width: 100%; height: 200px;  
+      
+      /* vertical-align: top; : 비디오도 인라인 */
+    }
+
+    p{
+      /* border: 10px solid #000; */
+      min-width: 800px;
+      min-width: 20%;
+    }
+
+    .video-wrapper{
+      
+    }
+    .video-wrapper video{
+      object-fit: cover; /* width와 height는 위에서 적용함 */
+    }
+
+  </style>
+</head>
+<body>
+  <h1>가변비디오</h1>
+  <p>
+    <video src="./movie.mp4" autoplay muted loop></video>
+  </p>
+  <div class="video-wrapper">
+    <div class="video-box">
+      <video src="./movie.mp4" autoplay muted loop></video>
+    </div>
+  </div>
+</body>
+</html>

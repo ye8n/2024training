@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>videoRatio</title>
+  <style>
+    body{margin: 0;}
+
+    .video-wrapper .youtube{
+      width: 100%;
+      aspect-ratio: 16/9; /* 항상 유튜브가 갖고 있는 16/9의 비율을 지키며, 여백 없이 100% 채움 */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/x7SwyoyuRPQ?si=tEoH1pAoGGH4lfWc&amp;controls=0&muted=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="youtube"></iframe>
+
+    <!-- &amp;controls=0&muted=1&autoplay=1
+     1. controls=0 : 하단 컨트롤바 비활성화
+     2. muted=1 : 영상을 음소거함, 음소거 되어 있어야 자동 재생 가능
+     3. autoplay=1 : 영상 자동 재생 활성화 -->
+
+  </div>
+</body>
+</html>

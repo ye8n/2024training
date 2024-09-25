@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transition-delay</title>
+  <!-- <style>
+
+    *{padding: 0; margin: 0; list-style: none;}
+
+    body h1{text-align: center;
+    margin: 20px;}
+
+    .container{
+      margin: 20px auto;
+      border: 3px solid #000;
+
+      display: flex;
+      justify-content: center;
+      
+      width: 800px; height: 800px; min-width: 600px;
+
+      background: #ddd;
+
+    }
+
+    .container li{
+      width: 20%; height: 30px; line-height:30px;
+      margin: 10px; padding: 3px;
+      text-align: center;
+      background: #000; color: #fff;
+      font-weight: bold; font-size: 1.2rem;
+
+      transition-property: background-color, height, color;
+
+      transition-duration: 0.5s;
+
+      
+    }
+
+    .container li:hover{
+      height: inherit; /* 고민해보기*/
+      background: #fff; color: #000;
+    }
+
+  </style> -->
+
+  <style>
+    h1{
+      text-align: center;
+    }
+
+    .container{
+      list-style: none;
+      padding: 0; margin: 0 auto;
+      border: 3px solid #000;
+      width: 90vw; height: 80vh; 
+      font-weight: bold; font-size: 1.3rem;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .container li{
+      text-align: center;
+      background: #ddd;
+      height: 2rem;
+      margin: 4px;
+
+      /* flex-grow: 1; grow또는 width사용 */
+      width: 20%;
+    }
+
+    .container:hover li:nth-child(1){
+      background: orange;
+      height: calc(100% - 8px);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>transition-delay</h1>
+  <ul class="container">
+    <li>바로 진행</li>
+    <li>0.5초</li>
+    <li>1초</li>
+    <li>2초</li>
+    <li>3초</li>
+  </ul>
+</body>
+</html>
