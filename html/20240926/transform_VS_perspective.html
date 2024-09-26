@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transform_VS_perspective</title>
+  <style>
+    h1, h2{
+      text-align: center;
+    }
+
+    ul{
+      list-style: none; margin: 0; padding: 0;
+      border: 3px solid #000;
+      width: 90vw;
+      text-align: center;
+      font-weight: bold; font-size: 1.2rem;
+
+      display: flex; flex-flow: wrap;
+      justify-content: center;
+    }
+
+    ul li{
+      width: 20%;
+      aspect-ratio: 1/1;
+      margin: 1%; /*?*/
+      border: 3px solid #000;
+    }
+
+    .box1 li{
+      background: #C4D7FF;
+
+      /* transform: perspective(); 
+      1. 원근감을 주고자 하는 대상에 직접 적용
+      2. 다른 요소(rotateX 등)와 중첩해서 사용 */
+      transform: perspective(40vw) rotateX(45deg);
+    }
+
+    .box2{
+      /* 부모 요소에 적용. 하나의 덩어리로 보고 원근값 적용 */
+      perspective: 40vw;
+    }
+    .box2 li{
+      background: #FFD7C4;
+      transform: rotateX(45deg);
+    }
+  </style>
+</head>
+<body>
+  <h1>transform VS perspective</h1>
+  <h2>transform: perspective()</h2>
+  <ul class="box1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+  <h2>perspective</h2>
+  <ul class="box2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+</html>
