@@ -68,12 +68,46 @@
 
       /* flex-grow: 1; grow또는 width사용 */
       width: 20%;
+
+      /* 트렌지션 적용 */
+      transition-property: all;
+      transition-duration: 1s;
+
     }
 
     .container:hover li:nth-child(1){
       background: orange;
       height: calc(100% - 8px);
+
+      transition-delay: 0;
     }
+
+    .container:hover li:nth-child(2){
+      background: #C96868;
+      height: calc(100% - 8px);
+      transition-delay: 0.5s;
+    }
+
+    .container:hover li:nth-child(3){
+      background: #FADFA1;
+      height: calc(100% - 8px);
+      transition-delay: 1s;
+    }
+
+
+    .container:hover li:nth-child(4){
+      background: #FFF4EA;
+      height: calc(100% - 8px);
+      transition-delay: 2s;
+    }
+
+    .container:hover li:nth-child(5){
+      background: #7EACB5;
+      height: calc(100% - 8px);
+      transition-delay: 3s;
+    }
+
+
 
   </style>
 </head>

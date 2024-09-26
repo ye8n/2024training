@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transform5_origin</title>
+  <style>
+    img{
+      width: 100%;
+      border: 6px solid red;
+      box-sizing: border-box;
+      vertical-align: top;
+
+      transition: 0.5s;
+
+      transform: rotate(45deg);
+    }
+
+    .box{
+      border: 10px solid #000;
+      margin: 100px auto;
+      width: 300px; height: 300px;
+    }
+
+    /* 퍼센트를 가장 많이 사용 */
+    .box1 img{transform-origin: 50%;} /* 기본값: x 50% y 50% */
+    .box2 img{transform-origin: center center;} /* 위와 동일 */
+    .box3 img{transform-origin: 0 0;} /* 0 0을 기준으로 45deg 회전 */
+    .box4 img{transform-origin: 100% 100%;} /* right0 bottom0을 기준으로 회전 */
+    .box5 img{transform-origin:20px 100px ;} 
+
+
+  </style>
+</head>
+<body>
+  <h1>transform:origin() 기준축</h1>
+  <div class="box box1"><img src="./img2.png" alt="img"></div>
+  <div class="box box2"><img src="./img2.png" alt="img"></div>
+  <div class="box box3"><img src="./img2.png" alt="img"></div>
+  <div class="box box4"><img src="./img2.png" alt="img"></div>
+  <div class="box box5"><img src="./img2.png" alt="img"></div>
+</body>
+</html>

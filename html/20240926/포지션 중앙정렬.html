@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>포지션 중앙정렬</title>
+  <style>
+    body{
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    .box{
+      width: 60vw; height: 20vh;
+      background: #ddd;
+      margin: 2rem auto;
+
+      position: relative;
+    }
+
+    .box h3{
+      background: lightblue;
+      width: 50%; height: 10vh;
+      margin: 0;
+      line-height: 10vh;
+
+      position: absolute;
+      
+    }
+
+    /* 포지션이 적용되어 있지 않고, 요소의 값은 정의되어 있을 때 */
+    .box1 h3{
+      position: static; /* 포지션absolute를 초기화함 */
+      margin: 0 auto; 
+    .box2 h3{}
+    .box3 h3{}
+    .box4 h3{}
+  </style>
+</head>
+<body>
+  <h1>포지션 중앙 정렬</h1>
+  <!-- .box.box$*4>h3{중앙정렬$} -->
+  <div class="box box1">
+    <h3>중앙정렬1</h3>
+  </div>
+  <div class="box box2">
+    <h3>중앙정렬2</h3>
+  </div>
+  <div class="box box3">
+    <h3>중앙정렬3</h3>
+  </div>
+  <div class="box box4">
+    <h3>중앙정렬4</h3>
+  </div>
+</body>
+</html>

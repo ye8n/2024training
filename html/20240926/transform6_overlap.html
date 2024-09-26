@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transform6_overlap</title>
+  <style>
+    .box-outer{
+      /* width: 600px; height: 600px; */
+      width: 50vw;
+      aspect-ratio: 1 / 1;
+
+
+      border: 3px solid #000;
+      margin: 5vw auto;
+
+      text-align: center; 
+      font-weight: bold; font-size: 1.2rem;
+    }
+    .box-inner{
+      background: orange; 
+      width: 100; height: 100%;
+
+      transition: .7s;
+    }
+    
+    .box-outer:hover .box-inner{
+      
+      transform: skew(360deg); /* 기울기 */
+      transform: rotate(360deg); /* 회전 */
+      transform: scale(0.7);
+      /* 이렇게 작성하면 scale만 적용됨 */
+
+      /* transform 중첩 */
+      /* 여러 개의 값 적용시, 띄어쓰기로 구분. 순서에 따라 결과 값이 달라질 수 있음 */
+      transform: scale(0.7) skewX(45deg) rotate(360deg);
+      
+
+
+    }
+  </style>
+</head>
+<body>
+  <h1>transform 중첩</h1>
+  <div class="box-outer">
+    <div class="box-inner">
+      rotate(); skew(); scale();
+    </div>
+  </div>
+</body>
+</html>

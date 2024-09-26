@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transitionShorthand</title>
+  <style>
+    *{padding: 0; margin: 0; text-decoration: none; color: inherit;
+      }
+
+    .button{background: #fff; color: #000; border: 3px solid #000;
+      padding: 10px 0; margin: 4px 6px;
+      text-align: center; font-weight: bold;
+      display: block; width: 80px;
+    }
+
+    .button:hover{background: #000; color: #fff; border: 3px solid #000;
+    }
+
+    .box{width: 50px; height: 50px; margin: 10px 0;
+
+      /* 트렌지션 적용 */
+      transition-property: all; /*생략 가능*/
+      transition-duration: 1s;
+      transition-delay: 0.5s;
+      transition-timing-function: ease-in-out;
+
+
+      /* 트렌지션 축약형. 값의 순서에 상관없이 작성 가능. 첫 번째 나오는 숫자는 시간, 두 번째 숫자는 대기시간 */
+      transition: all 1s 0.5s ease-in-out;
+
+      /* 가장 많이 쓰이는 방식. all과 속도? 생략  */
+      transition: 1s ease-in-out;
+    }
+
+    .box1{background: #D37676;}
+    .box2{background: #d4d4d4;}
+
+    /* +: 인접 형제 선택자, .box1만 적용됨 */
+    /* ~: 일반 형제 선택자, 박스 전부 적용됨 */
+    .button:hover + .box{
+      background: #fff;
+      width: 60vw;
+    }
+  </style>
+</head>
+<body>
+  <h1>transition 축약</h1>
+  <p>버튼 위에 마우스를 올리면 첫 번째 박스의 크기·색상이 변경</p>
+  <a href="#" class="button">이벤트</a>
+  <div class="box box1">움직인다</div>
+  <div class="box box2">안 움직인다</div>
+</body>
+</html>
