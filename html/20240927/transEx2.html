@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transEx2</title>
+  <!-- <style>
+    .menu-icon{
+      color: inherit; text-decoration: none;
+      background-color: lightblue;
+      display: block;
+
+      width: 50px; height: 50px;
+      position: fixed;
+      top: 30px;
+      right: 30px;
+    }
+
+    .btn-close{
+      /* opacity:0; */
+      transition-duration: .5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(./x.png) ;
+      background-size: contain;
+      background-repeat: no-repeat;   
+    }
+    .menu-icon:hover .btn-close{
+      transform: rotate(720deg);
+
+    }
+
+  </style> -->
+
+  <style>
+    .menu-icon{
+      width: 50px; height: 50px;
+      color: inherit; text-decoration: none;
+      background: lightskyblue;
+
+      position: fixed; /* 인라인이었던 a가 영역을 갖게 됨 */ 
+      top: 30px; right: 30px;
+    }
+
+    .menu-icon .btn-close{
+      display: block;
+      height: 100%;
+
+      /* span 닫기 버튼의 글자 안 보이게 하는 방법 2가지 */
+      /* font-size: 0; */
+      text-indent: -9999px;
+      
+      position: relative;
+    }
+
+    /* 비포 에프터에는 반드시 content를 포함 */
+    .menu-icon .btn-close::before, 
+    .menu-icon .btn-close::after{
+      content: ""; /* content는 인라인 */
+      background: #73ec8b;
+      width: 10%; height: 70%;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+<body>
+  <h1>transEx2</h1>
+  <!-- 마우스를 위에 올리면 x가 돌아감 -->
+   <a href="#" class="menu-icon">
+    <span class="btn-close">닫기 버튼</span>
+   </a>
+</body>
+</html>
