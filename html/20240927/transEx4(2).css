@@ -1,0 +1,55 @@
+@charset "uft-8";
+
+body{
+  background-image: linear-gradient(-15deg, #b7e0ff ,#fff5cd);
+  /* background-attachment: fixed; */
+  height: calc(100vh - 100px);
+  font-family: 'Edu AU VIC WA NT Guides';
+  text-transform: capitalize;
+}
+
+.profile-wrapper{
+  background-color: #fff;
+  width: 500px;
+  margin: 0 auto;
+
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+.profile-wrapper .txt-box{
+  padding: 20px;
+  width: 50%;
+}
+.profile-wrapper .txt-box h2{
+  font-size: 2rem;
+  font-style: italic;
+  border-bottom: 3px solid #000;
+  padding-left: 10px;
+}
+.profile-wrapper .txt-box p{
+  font-family: 'Gowun Dodum', 돋움, sans-serif;
+  line-height: 1.6;
+  margin: 20px 0 2px 10px;
+
+
+}
+.profile-wrapper .txt-box .sns-group{
+  display: flex;
+}
+
+.profile-wrapper .txt-box .sns-group a{
+  display: block;
+}
+
+.profile-wrapper .txt-box .sns-group a span{
+  color: lightsalmon;
+  
+}
+
+.profile-wrapper h3{}
+.profile-wrapper .img-box{}

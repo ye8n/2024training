@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transEx4</title>
+  <style>
+
+    *{
+      margin: 0; padding: 0; list-style:none;
+    }
+
+    body{
+      background: linear-gradient(lightpink, rgb(255, 255, 255)) ;
+    }
+    .wrapper{
+      display: flex;
+
+
+      height: 400px; width: 1000px; min-width: 800px;
+      background-color: #fff; 
+      box-shadow:
+       2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+       6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+       12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+       22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+       41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+       100px 100px 80px rgba(0, 0, 0, 0.07);
+
+       /* position: absolute;
+       top: 30%; left: 50%;
+       transform: translate(-50%,-50%); */
+
+       margin: 30% auto;
+
+       position: relative;
+
+       overflow: hidden;
+       
+    }
+
+    .wrapper .contents{
+      margin: 20px;
+      
+
+    }
+    .wrapper .contents .name{
+      font-size: 3rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      display: block;
+      border-bottom: 1px solid #000;
+      
+    }
+    .wrapper .contents p{
+      padding: 30px 0 ;
+    }
+    .wrapper .contents .button{
+      display: flex;
+      /* text-indent: -9999px; */
+      
+    
+    }
+
+    .wrapper .contents .button::after{
+      content: "";
+      width: 5px; height: 100%;
+
+      content: "";
+
+      content: "";
+
+    }
+
+    .wrapper .contents .button:nth-child(1) li{
+      background: #000;
+    }
+    .wrapper .contents .button {}
+    .wrapper .contents .button li a {
+      text-decoration: none; color: inherit;
+    }
+
+    .wrapper .contents .profile{
+      background: #000;
+      color: #fff;
+      font-family: 'Times New Roman', Times, serif;
+      padding: 8px; margin: 20px 0;
+      display: block;
+
+    }
+
+
+    .wrapper .img{
+      background-image: url(./shoes.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%; height: 100%;
+
+      border: 5px solid #000;
+      border-radius: 100%;
+
+      transform: translateX(10%) scale(1.5);
+
+      /* wrapper 밖으로 튀어나온 이미지를 어떻게 처리? */
+
+      /* display: block; */
+
+      
+
+
+
+    }
+  </style>
+</head>
+<body>
+  <!-- 박스 위에 마우스를 올리면 이미지 가  -->
+  <div class="wrapper">
+    <section class="contents">
+      <span class="name">name</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laborum impedit qui libero recusandae quasi eum.</p>
+
+      <ul class="button">
+        <li><a href="#">home</a></li>
+        <li><a href="#">e-mail</a></li>
+        <li><a href="#">gallery</a></li>
+      </ul>
+      <span class="profile">profile</span>
+    </section>
+    <section class="img">img 영역</section>
+  </div>
+</body>
+</html>

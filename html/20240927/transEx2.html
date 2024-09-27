@@ -36,7 +36,7 @@
     .menu-icon{
       width: 50px; height: 50px;
       color: inherit; text-decoration: none;
-      background: lightskyblue;
+      /* background: lightskyblue; : 완성하면 마지막으로 배경색 없애기 */
 
       position: fixed; /* 인라인이었던 a가 영역을 갖게 됨 */ 
       top: 30px; right: 30px;
@@ -51,17 +51,28 @@
       text-indent: -9999px;
       
       position: relative;
+
+      transition: .5s;
     }
 
     /* 비포 에프터에는 반드시 content를 포함 */
     .menu-icon .btn-close::before, 
     .menu-icon .btn-close::after{
       content: ""; /* content는 인라인 */
-      background: #73ec8b;
+      background: #ff5656;
+      border-radius: 5px;
       width: 10%; height: 70%;
       position: absolute;
       top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .menu-icon .btn-close::after{
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .menu-icon:hover .btn-close{
+      transform: rotate(360deg);
     }
   </style>
 

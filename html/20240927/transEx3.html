@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transEx3</title>
+  <!-- <style>
+    ul, li{
+      padding: 0; margin: 0; list-style: none;
+    }
+    a{color: inherit; text-decoration: none;}
+
+    .global-menu{
+      display: flex;
+      background: #000;
+      color: #fff;
+    }
+
+    .global-menu li{
+      display: block;
+      
+      flex-grow: 1; height: 40px; line-height: 40px;
+      text-align: center;
+      text-transform: capitalize; font-weight: bold;
+
+      border-bottom: #000 3px solid;
+
+      transition: .7s;
+    }
+
+    .global-menu li a{
+      display: block;
+    }
+
+    .global-menu li:hover{
+      border-bottom: red 3px solid;
+    }
+  </style> -->
+
+  <style>
+    body{
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    .global-menu{
+      background-color: black; color: #fff;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 90vw;
+      position: fixed; top: 0;
+
+      display: flex;
+
+      /* margin 0 auto와 동일함 */
+      left: 50%;
+      transform: translateX(-50%) 
+    }
+
+    .global-menu li{
+      width: 25%; 
+      /* flex-grow: 1;는 글자수가 다르면 간격이 달리짐 */
+    }
+    .global-menu li a{
+      text-decoration: none; color: inherit;
+      display: block;
+      padding: 10px 0;
+
+      position:relative;
+    }
+
+    .global-menu li a::after{
+      content: ""; /*문자·이모지 등 삽입 가능?*/
+      width: 0; height: 6px;
+      background: red;
+
+      position: absolute;
+      left: 0; bottom: 0;
+
+      opacity: 0;
+      transition: width 1s, opcity 0.5s;
+    }
+
+    .global-menu li a:hover::after{
+      content: "";
+      width: 100%;
+      opacity: 1;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- 해당 메뉴에 마우스를 올리면 왼쪽에서 오른쪽으로 바 진행 -->
+   <!-- 힌트: 아래쪽 바 크기가 0>100으로 바뀜 -->
+   <ul class="global-menu">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+   </ul>
+</body>
+</html>
