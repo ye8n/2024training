@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+@keyframes mov1 {
+  100% {
+    background-image: linear-gradient();
+    margin-left: 70vw;
+    transform: rotate(360deg);
+  }
+}

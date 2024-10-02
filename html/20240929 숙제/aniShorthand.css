@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+@keyframes mov1 {
+  100% {
+    background-image: linear-gradient(#FFEB00, #6EC207);
+    margin-left: 70vw;/* 레이아웃에 영향을 줌=찌그러짐, 자주 사용하지 않음 */
+    transform: rotate(360deg);
+  }
+}
+@keyframes mov2 {
+  100% {
+    background-image: linear-gradient(#FFEB00, #6EC207);
+    transform: rotate(360deg);
+    left: 80%;
+  }
+}
+@keyframes mov3 {
+  100% {
+    background-image: linear-gradient(#FFEB00, #6EC207);
+    transform: translateX(calc(100vw - 200px)) rotate(360deg);
+  }
+}

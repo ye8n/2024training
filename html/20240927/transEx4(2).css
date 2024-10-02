@@ -11,7 +11,7 @@ body{
 .profile-wrapper{
   background-color: #fff;
   width: 500px;
-  margin: 0 auto;
+  margin: 100px auto;
 
   box-shadow:
   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -20,10 +20,17 @@ body{
   22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
   41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
   100px 100px 80px rgba(0, 0, 0, 0.07);
+
+  position: relative; /* 이미지 박스의 포지션 기준 */
+
+  overflow: hidden;
+
 }
 .profile-wrapper .txt-box{
   padding: 20px;
   width: 50%;
+
+  
 }
 .profile-wrapper .txt-box h2{
   font-size: 2rem;
@@ -40,6 +47,11 @@ body{
 }
 .profile-wrapper .txt-box .sns-group{
   display: flex;
+  align-items: flex-end; /* 아이콘은 보통 아래축을 기준으로 맞추고(아래정렬) 각 아이콘의 사이즈와 여백을 조절함  */
+}
+
+.profile-wrapper .txt-box .sns-group li:nth-child(2) {
+  margin: 0 1.4rem 0 1.15rem;
 }
 
 .profile-wrapper .txt-box .sns-group a{
@@ -47,9 +59,47 @@ body{
 }
 
 .profile-wrapper .txt-box .sns-group a span{
-  color: lightsalmon;
-  
+  /* color: lightsalmon; */
+  font-size: 2rem;
+
 }
 
-.profile-wrapper h3{}
-.profile-wrapper .img-box{}
+.profile-wrapper .txt-box .sns-group a:hover span{
+  color: #b7e0ff;
+}
+
+.profile-wrapper h3{
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 4px 20px;
+}
+
+/* 이미지 박스 */
+.profile-wrapper .img-box{
+  text-indent: -9999px;
+  border: 6px solid #000;
+  background: url(./shoes.jpg) no-repeat 50%;
+  border-radius: 50%;
+  width: 400px; height: 400px;
+  
+  position: absolute;
+  right: -30%; 
+  /* 포지션 적용 시, 세로 중앙 정렬 */
+
+/* 
+  top: 0; bottom: 0;
+  margin: auto; */
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: 0.4s;
+
+}
+
+
+.profile-wrapper:hover .img-box{
+  right: -25%;
+}

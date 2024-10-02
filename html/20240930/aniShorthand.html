@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniShorthand</title>
+  <link rel="stylesheet" href="./aniShorthand.css">
+  <!-- <style>
+    .box{
+      font-weight: bold;
+
+    }
+
+    .box1{
+      width: 200px;
+      height: 80px;
+      background: rgb(84,4,4); color: #fff;
+
+      animation-name: ;
+    }
+
+
+
+    .box2{
+      
+      background-image: linear-gradient(lightblue, lightpink);
+      width: 200px; height: 200px;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 200px;
+
+      animation-name: key1;
+      animation-duration: 1s;
+      animation-iteration-count: 3;
+      animation-delay: .3s;
+
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes key1 {
+      0%{
+        
+      }
+      100%{
+        transform: translateX(400%) rotate(720deg) ;
+
+        background-image: linear-gradient(rgb(119, 31, 119),rgb(133, 238, 238));
+
+      }
+    }
+      
+</style> -->
+
+  <style>
+  .wrapper{
+    border: 3px solid #000;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 100%;
+    display: flex;
+
+    position: relative;
+  }
+
+  .block{
+    width: 200px; height: 50px;
+    background-color: orange;
+  }
+
+  .box{
+    width: 200px; height: 200px;
+    background-image: linear-gradient(#640d5f,#d91656);
+    border-radius: 50%;
+    text-align: center; line-height: 150px;
+
+ /*
+    animation-name: mov2;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 움직임? /*
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+
+    position: absolute;
+    left: 0; */
+
+
+    /* 순서에 상관 없이 띄어쓰기로 구분. 두 번째 나오는 s는 대기 시간으로 생략가능 */
+    animation: mov3 2s 1s 3 cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards alternate;
+  }
+</style>
+</head>
+<body>
+  <h1>animation 축약형</h1>
+  <div class="wrapper">
+    <div class="box">
+      <p>축약형</p>
+    </div>
+    <div class="block">
+      <p>block</p>
+    </div>
+  </div>
+</body>
+</html>

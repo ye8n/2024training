@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>transEx5(2)</title>
+<style>
+  h1{text-align: center;}
+
+  .products{
+    list-style: none;
+    padding: 0; margin: 0 auto;
+    border: 3px solid #000;
+    background-color: #87a2ff;
+
+    width: 80vw;
+    max-width: 1200px;
+
+    display: flex;
+    gap: 1rem;
+
+    padding: 1rem;
+  }
+  .products .item{
+    /* flex-grow: 1;
+    flex-basis: 33.33333; */
+    width: 33.3333%;  
+    aspect-ratio: 1 / 1; 
+
+    overflow: hidden;
+
+  }
+  .products .item a{
+    color: #000;
+    text-decoration: none;
+  }
+  .products .item a img{
+    width: 100%;
+    vertical-align: top;
+
+  }
+  .products .item a .txt-box{
+    background: rgba(0,0,0,0.8); color: #fff;
+    padding: 1rem;
+    aspect-ratio: 1 / 1;  
+
+    transition: 0.3s;
+  }
+
+  /* 마우스를 올렸을 때, txt-box 위로 이동 */
+  .products .item a:hover .txt-box{
+    transform: translateY(-100%);
+  }
+
+
+/* 말줄임 */
+
+/* 한 줄 말줄임 적용 */
+.products .item a .txt-box .desc1{
+  white-space: nowrap; /* 글자 자동 줄바꿈 금지 */
+  text-overflow: ellipsis; /* 말줄임 적용 */
+  overflow: hidden; /* 영역밖 요소를 숨김 */
+}
+
+/* 여러 줄 말줄임, 권장하지 않음. 스크립트 사용할 것. */
+.products .item a .txt-box .desc2{
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /* 몇 번째 줄에서 말줄임? */
+  -webkit-box-orient: vertical; /* display:box의 진행 방향 */
+}
+
+</style>
+</head>
+<body>
+  <!-- 
+    1. 마우스를 올리면 아래에서 위로 가격 레이어가 올라옴
+    2. 일정 사이즈 이상으로 커지지 않음 
+  -->
+
+  <h1>transEx5(2)</h1>
+  <!-- ul>.products>li.item*3>img+.txt-box -->
+  <ul class="products">
+    <li class="item">
+      <a href="">
+        <img src="../20240929 숙제/nike jordan black.jpeg" alt="shoes1">
+        <div class="txt-box">
+          <h3>조던 1 하이(Little Kids)</h3>
+          <p class="desc1">지난 번에 기회를 놓쳤어도 걱정하지 마세요</p>
+          <p class="price">가격: 109,000원</p>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a ref="">
+      <img src="../20240929 숙제/조던-1-little-kids-praline.jpg" alt="shoes2">
+      <div class="txt-box">
+        <h3>조던 2 하이(Little Kids)</h3>
+        <p class="desc2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere omnis commodi laudantium sint quasi eos magnam, </p>
+        <p class="price">가격: 119,000원</p>
+      </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href="">
+      <img src="../20240929 숙제/조던-1-하이-og-little-kids-midnight-navy.jpg" alt="shoes">
+      <div class="txt-box">
+        <h3>조던 3 하이(Little Kids)</h3>
+        <p class="desc3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, sit, ullam totam doloribus inventore illum possimus qui, unde ipsum velit asperiores cum rem voluptates porro culpa labore esse? Aliquid, id.</p>
+        <p class="price">가격: 129,000원</p>
+      </div>
+      </a>
+    </li>
+
+  </ul>
+
+</body>
+
+</html>
