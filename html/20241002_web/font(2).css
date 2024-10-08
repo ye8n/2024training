@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* pretendard */
+/* font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
+@import url(./pretendard.css);
+
+/* play */
+/* font-family: "Play", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');

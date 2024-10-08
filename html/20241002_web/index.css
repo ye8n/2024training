@@ -5,19 +5,27 @@ a{display: block;}
 
 body{
   min-width: 1080px;
-
   font-family: 'notokr';
 }
-
 main{
   background-image: url(./style/img/visual_default.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+
+  /* 비디오 적용 */
+
 }
+
+/* main video{
+  width: 100%; height: 100vh;
+  object-fit: contain;
+} */
 
 /* header */
 header{
+  /* z-index: 9999; */
+
   display: flex;
   justify-content: space-between;
   height: 86px;
@@ -64,6 +72,7 @@ main .home{
   height: 855px;
 }
 main .home .main-txt-wrapper{
+  text-transform: uppercase;
   margin-left: 152px;}
 main .home .main_button {
   display: flex; flex-flow: column;
@@ -71,7 +80,7 @@ main .home .main_button {
   margin-right: 35px;
 }
 main .home .main_button li a{
-  width: 90px; height: 90px; /* 1/1 쓰는 거 뭐였을까? */
+  width: 90px; height: 90px; /* 1/1 쓰는 거 뭐였을까? 생각나면 수정 */
   background: rgba(0, 0, 0,0.6);
   border-radius: 50%;
   margin: 10px 0px ;
@@ -81,7 +90,6 @@ main .home .main_button li a{
   justify-content: center;
   padding: 4px;
 }
-
 .home .main-txt-wrapper{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
@@ -93,31 +101,25 @@ main .home .main_button li a{
 }
 
 /* section info */
-
 .info{
 }
 .txt-wrapper{
   text-align: center;
-
   margin: 150px 0 60px 0;
 }
 .txt-wrapper h3{
   font-size: 3rem;
   text-transform: capitalize;
-  
+
   font-family: "Play", sans-serif;
-
   color: #413f3f;
-
 }
 .txt-wrapper{
-    
 }
-
 .info .data{  
   display: flex;
   justify-content: center;
-  
+
 }
 .info .data ul{
   display: flex;
@@ -126,7 +128,6 @@ main .home .main_button li a{
   display: flex;
   align-items: center;
   flex-flow: column;
-
   margin: 0 85px;
 }
 .info .data ul li img{
@@ -145,21 +146,18 @@ main .home .main_button li a{
   color: #413f3f;
 }
 .info .data ul li p:nth-of-type(1){
-  color: rgb(31, 31, 243);
+  color: #022974;
 }
 .info .data ul li p:nth-of-type(2){
   color: #949393;
 }
-
-
 /* section: business */
 .business{}
 .business .contents{
   display: flex;
   margin: 0 86px;
-  
-  position:relative
 
+  position:relative
 }
 .business .contents ul{
   width: 50%;
@@ -170,7 +168,8 @@ main .home .main_button li a{
   margin: 4px;
 }
 .business .contents ul li a{
-
+  /* text-wrap: nowrap; */
+  padding: 8px;
 }
 .business .contents img{
   width: 50%;
@@ -183,5 +182,249 @@ main .home .main_button li a{
   left: 50%; top: 50%;
   transform: translate(-50%,-50%);
   padding: 8px;
+}
+/* 
+.schedule{
+  position:relative
+} */
 
+.schedule ul{
+  display: flex;
+  justify-content: center;
+}
+
+.schedule ul li{
+  margin: 0 16px;
+}
+
+.schedule a{
+  background: orange;
+  color: #fff;
+  padding: 8px;
+  width: 120px;
+  text-align: center;
+  margin: 60vh auto 0;
+
+  /* position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%); */
+}
+
+.contact{
+  height: 80vh;
+}
+.contact .txt-wrapper{}
+.contact .txt-wrapper h3{}
+.contact .txt-wrapper p{}
+
+.contact .contact_main{
+  display: flex;
+  margin: 0 86px;
+}
+.contact .contact_main .news{
+  background-image: url(./style/img/visual_default.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; flex-flow: column;
+  justify-content: center; 
+  align-items: center;
+
+  padding: 50px;
+
+  color: #fff;
+
+  width: 30%;
+
+}
+.contact .contact_main .news p:nth-child(1){
+   font-size: 2rem;
+}
+.contact .contact_main .news a{
+  font: 1rem;
+
+  border: 1px solid #fff;
+  padding: 4px 16px;
+}
+
+.contact .contact_main .notice{
+
+  margin: 0px 46px;
+
+  flex-grow: 2;
+
+
+}
+
+.contact .contact_main .notice .notice_top{
+  display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+}
+.contact .contact_main .notice .notice_top h4{
+  font-size: 2rem;
+  font-family: "Play", sans-serif;
+}
+.contact .contact_main .notice .notice_top a{
+  font-size: 0.8rem;
+  margin: 3rem;
+  border: 1px solid #c0bfbf;
+  padding: 4px 16px;
+}
+
+.contact .contact_main .notice li{
+  border-bottom: 1px solid #e9e9e9;
+  padding: 12px;
+  color: #7e7e7e;
+
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+
+.contact .contact_main .notice li:nth-child(1){
+  border: none;
+}
+
+.contact .contact_main .notice li span{
+  font-family: "Play", sans-serif;
+  font-weight: bold;
+  color: #c0bfbf;
+  font-size: 0.8rem;
+}
+
+
+
+.contact_main .recruit{
+  background-image: url(./style/img/bg_main_recruit.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 16%;
+  aspect-ratio: 1/1.5;
+
+  padding: 10px 20px;
+  position: relative;
+
+   aspect-ratio: 1;
+}
+.contact_main .recruit p:nth-child(1){
+  color: orange;
+  font-weight: bold; 
+  font-size: 52px;
+  font-family: "Play", sans-serif;
+}
+.contact_main .recruit a{
+  position: absolute;
+  left: 50%; bottom: 10%;
+  transform: translate(-50%,-50%);
+  background: orange;
+  color: #fff;
+  padding: 8px;
+  width: 120px;
+  text-align: center;
+}
+ .company{
+  background: #ececec;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 20px;
+  padding: 20px;
+}
+footer{
+  background: #2e2e2e;
+  color: #6d6969;
+  font-size: 0.8rem;
+  padding: 40px 100px;
+}
+footer .footer_top{
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_top .footer_logo{
+  background-image: url(./style/img/ft_logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  text-indent: -999px;
+}
+footer .footer_top .footer_menu{
+  display: flex;
+  margin-bottom: 40px;
+}
+footer .footer_top .footer_menu li{
+  margin: 6px;
+}
+footer .footer_top .footer_menu li a{
+}
+footer .adress{
+}
+footer .adress li{}
+footer p{margin: 20px 0;}
+
+/* 마우스 이벤트 */
+
+
+header .global-menu li:hover{
+
+  color: orange;
+}
+
+
+header .header-menu li:nth-child(1){
+  background: orange;
+  border-radius: 18px;
+
+}
+
+section.home .main_button li a:hover{
+  background-color: rgba(255, 165, 0,0.8);
+  transition-duration: 0.4s;
+}
+
+
+section.business .contents ul li a{
+  font-size: 0.9rem;
+
+}
+
+section.business .contents ul li:hover{
+  color: orange;
+  cursor: pointer;
+}
+
+/* section.business .contents ul li:checked{
+  border-top: 3px solid orange;
+} */
+
+section.business .contents a:hover{
+  border-radius: 20px;
+  transition-duration: 0.4s;
+}
+
+section.schedule ul li {
+  color: #022974;
+  font-family: "Play", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+section.schedule ul li:hover{
+  color: orange;
+  transition-duration: 0.2s;
+}
+
+section.schedule a:hover{
+  border-radius: 20px;
+  transition-duration: 0.4s;
+}
+
+section.contact .contact_main .recruit a:hover{
+  border-radius: 20px;
+  transition-duration: 0.4s;
+}
+
+header .header-menu li{
+  font-size: 0.9rem;
 }
