@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridBasic4</title>
+</head>
+<body>
+  <style>
+    body {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .container {
+      width: 90%;
+      margin: 50px auto;
+      border: 6px solid #000;
+
+      display: grid;
+      gap: 4px;
+
+    }
+
+    .box1 {
+
+      /* 2행 100px 7열(1fr) */
+      grid-template-rows: 100px 100px;
+      /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+      grid-template: 100px 100px / repeat(7, 1fr);
+      /* 윗줄 축약형 */
+    }
+
+    .box2 {
+      /* 3행(70px) 6열(150px 1fr)  */
+      grid-template: repeat(3, 70px) / 150px repeat(5, 1fr);
+
+
+    }
+
+    .box3 {
+      /* 총 7열 : 1,2열:150px 3열:최대200 나머지4열: 1fr */
+      grid-template-rows: 150px 150px minmax(auto, 200px) repeat(4, 1fr);
+
+    }
+
+    .container .item {
+      background-color: rgb(126, 206, 79);
+    }
+  </style>
+</body>
+<h1>gridBasic4</h1>
+<h2>repeat(반복횟수, 크기); 행과 열의 값 반복</h2>
+<div class="container box1">
+  <div class="item">item1</div>
+  <div class="item">item2</div>
+  <div class="item">item3</div>
+  <div class="item">item4</div>
+</div>
+<div class="container box2">
+  <div class="item">item1</div>
+  <div class="item">item2</div>
+  <div class="item">item3</div>
+  <div class="item">item4</div>
+</div>
+<div class="container box3">
+  <div class="item">item1</div>
+  <div class="item">item2</div>
+  <div class="item">item3</div>
+  <div class="item">item4</div>
+</div>
+<div class="container box4">
+  <div class="item">item1</div>
+  <div class="item">item2</div>
+  <div class="item">item3</div>
+  <div class="item">item4</div>
+</div>
+
+</html>
