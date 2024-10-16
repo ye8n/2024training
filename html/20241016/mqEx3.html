@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>mqEx3</title>
+  <style>
+    body{
+      background: rgb(84, 177, 207);
+      margin: 0; padding: 0;
+      text-align: center;
+    }
+    .wrapper{
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    li{background: #fff;
+      margin: 10px;
+      padding: 10px;
+    }
+    li:nth-child(4){
+      display: none;
+    }
+
+  /* t */
+    @media (width >= 900px) {
+      body{
+        background: lightblue;
+      }
+      .wrapper{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      li{background: rgb(47, 137, 153); color: #fff;}
+      li:nth-child(10){
+        display: none;
+      }
+    }
+
+    @media (width >= 1200px) {
+      body{
+        background: #fff;
+      }
+
+      .wrapper{
+        grid-template-columns: repeat(4, 1fr);
+      }
+      li:nth-child(10){
+        display: block;
+        background: #8b2727;
+      }
+    }
+
+    @media (width >= 1400px){
+      .wrapper{
+      grid-template-columns: repeat(5,1fr);
+    }
+      li:nth-child(4){
+        display: block;
+      }
+
+      li{
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <ul class="wrapper">
+    <li>txt1</li>
+    <li>txt2</li>
+    <li>txt3</li>
+    <li>txt4</li>
+    <li>txt5</li>
+    <li>txt6</li>
+    <li>txt7</li>
+    <li>txt8</li>
+    <li>txt9</li>
+    <li>txt10</li>
+  </ul>
+</body>
+</html>

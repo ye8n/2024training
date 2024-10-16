@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* media 선언 안 해도 됨 */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  background-color: #FABC3F;
+  margin: 0;
+  /* padding: 30px; */
+  padding: 1.875em;
+  transition: 0.4s;
+  font-size: 1.5rem;
+}
+
+h1 strong {
+  display: block;
+}
+
+h2 {
+  background-color: #E85C0D;
+  margin: 0;
+  font-size: 1.2rem;
+  /* padding: 20px; */
+  padding: 1.25em;
+  transition: 0.4s;
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: 20vh;
+  font-weight: bold;
+}
+
+.container .box1 {
+  background-color: #C7253E;
+}
+
+.container .box2 {
+  background-color: #821131;
+}
+
+.container .box3 {
+  background-color: #640D5F;
+}
