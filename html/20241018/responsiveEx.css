@@ -1,0 +1,19 @@
+@charset "uft-8";
+
+*{
+  font-family: font-family: "Noto Sans KR", sans-serif;
+}
+
+/* header */
+header .logo{
+  background:url(./imgs/logo.png) no-repeat;
+}
+
+
+/* footer */
+
+.footer-menu .li .footer
+
+.footer-bottom{
+  background: #ddd;
+}

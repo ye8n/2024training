@@ -1,0 +1,38 @@
+@charset "uft-8";
+
+/* "Oswald", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+html{
+  font-size: 14px;
+}
+
+body{
+  font-family: "Oswald", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  background: url(./img.PNG) fixed no-repeat 50% / cover;
+  /* fixed 브라우저 기준. */
+  color: #fff;
+}
+
+.global-menu-wrapper .global-menu{
+  display: none;
+}
+
+.global-menu-wrapper a{
+display: block;
+border-bottom: 1px solid #ffff;
+padding: 10px;
+}
+
+.global-menu-wrapper .global-menu.active{
+  display: block;
+}
+
+.global-menu-wrapper .mobile-btn{
+  background: rgba(32,62,96,0.6) url(./ellipsis.svg) no-repeat 95% 50% /10px;
+}
+
+/* .global-menu-wrapper .mobile-btn:after{} */

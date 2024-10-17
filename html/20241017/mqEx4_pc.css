@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@media (min-width:1200px) {
+  html{
+    font-size: 16px;
+  }
+
+  .global-menu-wrapper .global-menu{
+    
+    grid-template-columns: repeat(5, minmax(100px, 200px));
+    justify-content: self;
+  }
+
+  .global-menu-wrapper .global-menu li a{
+    border-right: 1px solid #fff;
+    text-align: center;
+  }
+  .global-menu-wrapper .global-menu li a:hover{
+    background: rgba(32,62,96,0.7);
+  }
+  .global-menu-wrapper .global-menu li:last-child a{
+    border-right: none;
+  }
+}
