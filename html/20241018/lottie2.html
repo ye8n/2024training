@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>lottie2</title>
+  <style>
+    .container{
+      width: 300px;
+      aspect-ratio: 1 / 1;
+      border: 1px solid #000;
+    }
+  </style>
+
+
+
+
+<script src="../asset/script/lottie.min.js"></script>
+</head>
+<body>
+  <div class="container" id="animation">
+
+  </div>
+
+  <script>
+    const lottie2 = lottie.loadAnimation({
+      container: document.getElementById('animation'), // the dom element that will contain the animation :애니메이션 DOM 요소(대상)
+      renderer: 'svg', //렌더링 방식: svg, canvas, html
+      loop: true, //반복
+      autoplay: true, //자동재생
+      path: './Untitled.json' // the path to the animation json //경로(내부 혹은 외부, )
+    });
+  </script>
+</body>
+</html>

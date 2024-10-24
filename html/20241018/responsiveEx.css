@@ -1,13 +1,194 @@
 @charset "uft-8";
 
-*{
-  font-family: font-family: "Noto Sans KR", sans-serif;
+body{
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* title 공통 적용 */
+
+.title h2{
+  font-size: 3rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bold;
+  text-transform: auto;
+  padding: 20px 0;
+}
+
+.title h2::after{
+  content:" ";
+  width: 80px;
+  height: 3px;
+  background: #000;
+  display: block;
+  margin: 30px auto;
+
+}
+
+/* 공통 적용 */
+.padding10{
+  padding: 10px;
+}
+.padding20{
+  padding: 20px;
+}
+.padding30{
+  padding: 30px;
+}
+.padding40{
+  padding: 40px;
+}
+.padding50{
+  padding: 50px;
 }
 
 /* header */
-header .logo{
-  background:url(./imgs/logo.png) no-repeat;
+/* header .header-top .logo{
+  background:url(./imgs/logo.png) no-repeat 50% 100px/50px contain;
+  text-indent: -999px;
+  height: 150px;
 }
+header .header-top .global-menu{
+  background: url(./menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg);
+}
+
+header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+} */
+
+*::selection{
+  background: rgb(91, 167, 214); color: #fff;
+}
+
+body{
+  color: #1b1b1b;
+}
+
+header img{
+  background: lightpink;
+}
+
+
+.txt-wrapper h3{
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 20px;
+
+}
+
+.txt-wrapper li{
+  border-bottom: 1px solid #f0f0f0;
+  margin: 20px 0;
+}
+
+.txt-wrapper li:last-child{
+  border: none;
+}
+
+
+.txt-wrapper p{
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+  margin: 20px 0;
+}
+
+/* img-wrapper */
+.img-wrapper img{
+  padding: 6px 0;
+}
+
+
+
+/* business */
+
+.business p{
+  font-size: 1.7em;
+  font-weight: 300;
+
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  text-align: center;
+  line-height: 1.8;
+
+  padding: 0 30px;
+}
+
+/* business-img-list */
+
+.business-img-list li{
+  padding: 30px 0;
+}
+
+.business-img-list li p{
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+.business-img-list li span{
+  font-size: 1.3rem;
+    line-height: 1.8;
+    color: #2b2b2b;
+    text-align: center;
+    display: block;
+    padding: 0 20px;
+}
+
+.youtube{
+  background: rgb(244, 244, 247);
+}
+
+.youtube h2{
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 50px 0;
+}
+
+.youtube p{
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #2b2b2b;
+  margin-bottom: 80px;
+}
+
+.service li{
+
+}
+
+.service li h3{
+  font-weight: bold;
+  padding: 30px;
+
+}
+
+.service li p{
+  padding: 0 30px;
+  line-height: 1.6;
+  color: #585858;
+}
+
+/* brand */
+.brand{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.brand img{
+  grid-template-columns: 3, 1fr;
+  opacity: 60%;
+  transition: 0.5s;
+}
+
+.brand img:hover{
+  opacity: 100%;
+}
+
+
 
 
 /* footer */
