@@ -158,7 +158,45 @@ footer .footer-copyright .footer-policy li:first-child::after{
   }
   .header .header-nav .global-menu li {
     border-bottom: none;
+    padding: 0;
   }
   .header .header-nav .global-menu li a {
-
+    /* height: 100%; */
+    height: 79px; /* 80px - 아래 보더값 1px */
   }
+
+  .header .header-nav .global-menu li:hover a{
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  /* footer */
+
+  footer .footer-info{
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-auto-rows: 300px; */
+    grid-auto-rows: auto;
+    min-width: 1020px;
+    max-width: 1530px;
+    margin: 0 auto;
+    place-items: center;
+    padding: 70px 0;
+  }
+
+  footer .footer-info .footer-info-list:last-child{
+    align-self: start;
+  }
+
+  footer .footer-info .footer-info-list li{
+    overflow: hidden;
+  }
+
+  footer .footer-info .footer-info-list li svg{
+    transition: 0.1s;
+  }
+
+  footer .footer-info .footer-info-list li:hover svg{
+    transform: translateY(-100%);
+  }
+}
+

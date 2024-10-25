@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptBasic</title>
+  <style>
+    body{
+      background: #ddd;
+    }
+  </style>
+
+<!-- 내부 선언1 -->
+<script type="text/javascript"> // 텍스트 기반의 자바 스크립트임을 선언
+  // type 속성은 xml, xhtml 방식일 때 필수이나, html5에서는 없는 것이 기본임.
+  // 리액트에서는 type 속성이 필수.
+
+  /*
+   스크립트의 여러 줄 주석 처리 방식, 
+   css와 동일.
+
+   document.querySelector('body').innerHTML = 'Hello JavaScript!'; // body 타입 선택자를 찾아서... HTML에 'Hello JavaScript!'를 추가해라?
+ */
+
+  // DOM: 문서객체모델
+  // document 객체 안에서, 함수
+
+  /* JS 작성 시 주의사항
+  head 영역 등 DOM을 불러오기 전에 작성시, 문서 준비 이벤트 필요
+  
+
+
+ </script>
+<!-- 외부 선언2 -->
+<script defer src="./javaScriptBasic.js" ></script> 
+<!-- 1. 닫는 태그 이전에 값 작성하면 x -->
+<!-- 2. defer: 작성시, 스크립트 내부에 문서 준비 이벤트 필요 없음 -->
+
+</head>
+
+<body>
+  <!-- 내부 선언2, 표준 방식 -->
+  <!-- 
+  <script> //DOM을 다 불러온 다음, JS실행
+  document.querySelector('body').innerHTML = 'Hello JavaScript!';
+  </script>
+   -->
+
+  <!-- 외부 선언1 -->
+   <!-- 
+   <script src="./javaScriptBasic.js"></script>
+    -->
+  </body>
+
+</html>

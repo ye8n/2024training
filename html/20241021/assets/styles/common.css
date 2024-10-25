@@ -144,6 +144,10 @@ body {
     --font-main-title-sm: 0.95rem;
 
     --spacing-5xlg: 6.6666rem;/* 120px */
+    --spacing-lg: 3.3333rem; /* 60px */
+    --spacing-md: 2.2222rem; /* 40px */
+    --spacing-sm: 2rem; /* 36px */
+    --spacing-xsm: 1.1111rem; /* 20px */
   }
 
   html {

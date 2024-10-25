@@ -25,22 +25,18 @@
 
 
 /**** main-intro ****/
-.main-intro{}
-.main-intro .main-intro-wrapper{}
-.main-intro .main-intro-wrapper li{
+.main-intro .main-intro-wrapper li {
   border-bottom: var(--border-btm-gray);
   padding: var(--spacing-xsm) var(--spacing-md) var(--spacing-lg);
 }
-
-.main-intro .main-intro-wrapper li:last-child{
+.main-intro .main-intro-wrapper li:last-child {
   border-bottom: none;
 }
-
-.main-intro .main-intro-wrapper li h3{
+.main-intro .main-intro-wrapper li h3 {
   font-family: var(--font-main-en);
   font-weight: 700;
   font-size: var(--font-main-title-lg);
-  margin: var(--spacing-md) 0 var(--spacing-md) 0;
+  margin: var(--spacing-md) 0;
 }
 
 /**** main-grid ****/
@@ -170,7 +166,7 @@
   width: 100%;
 }
 .main-service .main-service-gallery li .main-service-gallery-text {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
 }
 .main-service .main-service-gallery li .main-service-gallery-text h4 {
   font-family: var(--font-main-en);
@@ -263,3 +259,135 @@
   width: 70%;
 }
 
+/* 1020px 이상일 때 */
+@media (min-width:1020px) {
+  /**** main-slide ****/
+  .main-slide {
+    margin-top: 80px;
+  }
+
+  /**** main-intro ****/
+  .main-intro .main-intro-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1600px;
+    margin: 80px auto;
+  }
+  .main-intro .main-intro-wrapper li:nth-child(odd) {
+    border-right: var(--border-btm-gray);
+  }
+  .main-intro .main-intro-wrapper li:nth-child(3) {
+    border-bottom: none;
+  }
+
+  /**** main-grid ****/
+  .main-grid .main-grid-wrapper {
+    gap: 0;
+    gap: initial;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .main-grid .main-grid-wrapper li {
+    height: 35vh;
+  }
+  .main-grid .main-grid-wrapper .main-grid-bg1 { 
+    grid-row:  span 2; 
+    height: 70vh; 
+  }
+  .main-grid .main-grid-wrapper .main-grid-bg4 { 
+    height: 35vh;
+    grid-column: 2 / 4;
+  }
+  .main-grid .main-grid-wrapper .main-grid-bg5 { 
+    height: 35vh;
+  }
+
+  .main-grid .main-grid-wrapper li {
+    height: 35vh;
+    overflow: hidden;
+  }
+  .main-grid .main-grid-wrapper .main-grid-bg1 { 
+    grid-row:  span 2; 
+    height: 70vh; 
+  }
+  .main-grid .main-grid-wrapper .main-grid-bg4 { 
+    height: 35vh;
+    grid-column: 2 / 4;
+  }
+  .main-grid .main-grid-wrapper .main-grid-bg5 { 
+    height: 35vh;
+  }
+  
+  .main-grid .main-grid-wrapper li h3{
+    display: grid;
+    opacity: 0;
+    transition: 0.4s;
+    transform: translateY(-30vh);
+  }
+  
+  .main-grid .main-grid-wrapper li:hover h3{
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+
+  /**** main-business ****/
+  .main-business .main-business-list {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: var(--spacing-5xlg) auto;
+  }
+
+  /**** main-youtube ****/
+  .main-youtube {
+    margin: 0;
+    padding: 100px 0 var(--spacing-lg);
+  }
+  .main-youtube .main-youtube-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25vh;
+  }
+  .main-youtube .main-youtube-wrapper .main-youtube-video {
+    grid-column: span 2;
+  }
+  .main-youtube .main-youtube-wrapper .main-title {
+    margin: 0;
+    /* height: 25vh; */
+    line-height: 0.9;
+  }
+
+  /**** main-service ****/
+  .main-service .main-service-gallery li {
+    width: 20vw;
+    height: 25vw;
+    /* aspect-ratio: 4 / 5; */
+
+    /*
+    @media (max-width:1400px) {
+      font-size: 0.8rem;
+    }
+    */
+    font-size: clamp(0.8rem, 1vw, 1rem);
+  }
+
+  /**** main-location ****/
+  .main-location {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .main-location .main-location-menu li .tab-box {
+    padding-top: 100px;
+  }
+  .main-location .main-location-menu .main-location-office .main-location-map .main-location-info li {
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) 1fr;
+  }
+  /*
+  .main-location .main-location-menu .main-location-office .main-location-map .main-location-info li strong {
+    display: inline-block;
+    width: 200px;
+  }
+  */
+
+  /**** main-talk ****/
+}
