@@ -1,0 +1,89 @@
+<script>
+  //데이터타입
+  console.log('---문자열 String ---');
+  let str = "string1"; //큰 따옴표
+  str = 'string1'; //작은 따옴표
+
+  // str == ``; //백틱 ES6+
+  str = `문자열 ${str}`; //이해못했다 
+  // 문자열 string1
+
+  str = "큰 따옴표로 감싼 문자열 내의 '작은 따옴표'는 문자열이다";
+  str = '작은 따옴표로 감싼 문자열 내의 "큰 따옴표"는 문자열이다';
+
+  str = `orange`;
+  str = str.toUpperCase(); //대문자로 변환
+  str = str.toLowerCase(); //소문자로 변환
+
+  str = str.substring(1,3); //시작 인덱스, 마지막 인덱스 앞까지 문자열 구분
+  //시작 인덱스는 0부터 시작. 
+
+  console.log(str.length); // .length 요소의 개수 //문장이면 단어 개수, 단어면 글자수, 문자 객체에 포함되어 있으므로 문자열에서 사용 가능.
+  console.log(typeof str); // 데이터타입 string
+  console.log(str); // print: ra 
+
+  console.log('---숫자 Number---');
+  let num = 10; //양의 정수
+  num= 1.10; //실수
+  num = -1.10; //음의 실수
+  num = '-1.10'; //문자열 string
+  num = Number(num); //객체이자 함수, 숫자형으로 변환해주는 함수
+  console.log(num); // print: -1.1 
+
+  console.log('--- Nan ---');
+  num = '문자열123';
+  num = Number(num);// NaN: Not a number, Number는 숫자만 변환 가능, 숫자 외의 값은 Nan의 결과값을 리턴(뱉음)
+  console.log(typeof NaN); //number
+
+  num = 1000;
+  console.log(num.length); //undefined: 데이터 타입 중 하나, null과 다름
+
+  console.log('---논리 Boolean---');
+  let boo = true; //참==1
+  console.log(boo);
+
+  boo = false;
+  boo = '안녕?'; //문자열
+  boo = Boolean(boo); //논리 함수를 통해, true == 데이터가 존재하면 true, 없으면 false
+  console.log(typeof boo); //boolean
+
+  console.log('--- undefined ---');
+  //선언은 되었지만 값이 할당되지 않은 변수에 접근할 때
+  //존재하지 않는 객체 프로퍼티(속성)에 접근할 때
+  //개발자가 의도적으로 할당한 값이 아닌, 자바스크립트 엔진에 의해 초기화된 값
+
+  let und;
+  console.log(typeof und);//출력값: 데이터 타입 undefined
+
+  console.log('--- null---');
+  //값 없음. 개발자가 의도적으로 변수에 값을 넣지 않았다는 것을 명시할 때 사용
+  let nu = null;
+  console.log(nu); //null
+  console.log(typeof nu); //출력값: object(객체). 원래 null이 떠야 하는데 JS설계 오류, null의 타입은 typeof로 확인불가.
+
+  console.log('--- 객체 Object ---');
+  let obj = {};
+
+  obj = {
+    name: 'js',
+    id: 1
+  }
+  console.log(obj);
+  console.log(typeof obj); //출력값: object
+
+  console.log('--- 함수 Function ---');
+  let foo = function () {}; //function () : 함수 키워드(명령어)
+  foo = function() {1+1}; 
+  console.log(foo);// 1+1라는 내용만 보여줌 ... 값을 불러내는 기능이 따로 있음 
+
+  console.log('--- 배열 Array ---');
+  let arr = ['배열', 2, obj, function(){}, true, nu];
+  console.log(arr); //인덱스 값을 기본으로 가짐. (arr는 0~5번, length:6)
+  console.log(typeof arr); //출력값: object, JS 설계오류2
+
+  console.log('--- typeof 연산자: 데이터 타입 확인 ---');
+  console.log(typeof []); // 빈 배열, 출력값: object
+  console.log(typeof ''); //빈 문자열, 출력값: String 
+  console.log(typeof false); // 출력값: boolean
+
+</script>
