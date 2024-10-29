@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>else-if 조건문</title>
+</head>
+
+<body>
+  <h1>else-if 조건문</h1>
+  <script>
+    /*
+      if (조건1) {
+        실행문;
+      } else if(조건2) { else if()는 제한없이 작성 가능 
+        실행문
+      } else if (조건3) {
+         실행문
+      } else { 위의 조건이 모두 거짓일 때 실행
+          실행문 
+      }
+    */
+
+    // 1. 변수에 입력창(prompt)을 대입해서 하루의 걸음 수를 입력 받아
+
+    const step = prompt('오늘의 걸음수를 입력해주세요');
+
+    // 2. 5000보 이상이면 alert('잘하셨습니다') 출력
+    // 3. 미만이면 격려
+    // 4. 전부 아니면, 숫자만 입력하세요.
+    
+    if (step >= 5000){
+      alert('잘하셨습니다.')
+    } else if (step < 5000) {
+      alert('조금 더 걸어보세요')
+    } else {
+      alert('숫자로 입력해주세요')
+    }
+
+
+  </script>
+</body>
+
+</html>

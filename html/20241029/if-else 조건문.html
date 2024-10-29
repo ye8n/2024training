@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>if-else 조건문</title>
+</head>
+
+<body>
+  <h1>if-else 조건문</h1>
+  <script>
+    /*
+    if-else 조건문
+
+    if(조건) { 조건이 참인 경우 실행 
+      실행문;
+    } else { 위의 조건이 거짓이면 실행 
+      실행문
+      };
+    */
+
+    // 1. 변수에 입력창(prompt)을 대입해서 하루의 걸음 수를 입력 받아
+    let step = prompt('오늘의 걸음 수를 입력해주세요');
+    console.log(typeof step); //string
+    // prompt(), input의 입력값은 [문자열]로 반환
+    // step = Number(step); // 입력받은 문자열을 [숫자형]으로 변환
+    // step = parseInt(step); //[정수형]으로 반환
+    step =+ step;
+    // step = step + ""; 더하기 연산자로 빈문자열을 붙여 [문자열]로 반환?
+    console.log(typeof step);
+
+    // 2. 5000보 이상이면 alert('잘하셨습니다') 출력
+    if (step>=5000) {
+      alert(`${step}보 이상이면 잘하셨습니다.`)
+    } else {
+      alert(`${step}보면 더 걸으셔야 합니다`)
+    };
+
+  </script>
+</body>
+
+</html>
