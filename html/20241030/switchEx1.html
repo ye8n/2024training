@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>switch Ex1</title>
+</head>
+
+<body>
+  <h1>switch Ex1</h1>
+  <script>
+    /* 
+    입력 받은 값이 짝수인 경우, xx은 짝수입니다 출력
+    입력 받은 값이 홀수인 경우, xx은 홀수입니다 출력
+     */
+
+    const num = prompt('숫자를 입력해주세요');
+    switch (num % 2) { //더하기를 제외한 연산자는 '숫자형 문자열'로 자동 형변환하여 연산
+      case 0:
+        document.body.innerHTML += `<h2>${num}은 짝수입니다</h2>`
+        break;
+      case 1:
+        document.body.innerHTML += `<h2>${num}은 홀수입니다</h2>`
+        break;
+
+      default:
+        alert(`숫자만 입력해주세요`);
+        break;
+    }
+  </script>
+</body>
+
+</html>
