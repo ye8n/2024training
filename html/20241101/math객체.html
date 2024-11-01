@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>math객체</title>
+</head>
+
+<body>
+  <h1>Math객체</h1>
+  <p>수학과 함수를 위한 속성(프로퍼티)를 제공하는 내장객체</p>
+  <ul>
+    <li><a href="https://ko.javascript.info/number" target="_blank">javascript info</a></li>
+  </ul>
+
+
+
+  <script>
+    console.log(Math.PI); // 3.141592653589793
+    console.log(Math.PI);// 3.141592653589793
+
+    console.log('.random() --------');
+    // 0~1사이의 랜덤 실수 반환. 0은 포함되나 1은 포함되지 않음
+    console.log(Math.random());
+    // 1~10까지의 난수
+    let ran = Math.random() * 10 + 1;
+    console.log(ran);
+
+    console.log('.floor() --------');
+    // 소수점 이하 내림하여 정수로 반환
+    console.log(Math.floor(1.8));// 1
+    console.log(Math.floor(-1.8));// -2
+    console.log(Math.floor(-9.1));// -10
+    console.log(Math.floor(ran));// 1
+
+    // 1에서 1000까지의 난수 : 예시) 로또 당첨기, 발표 순서 정하기 등...
+    console.log(
+      Math.floor(Math.random() * 1000 + 1)
+    );
+
+    // 241102 이어서~ 
+    console.log('.min() --------');
+    // 제일 작은 값 반환
+    console.log('.max() --------');
+    // 제일 큰 값 반환
+    console.log('.toFixed() --------');
+    // 소수점 이하 몇자리까지만 반환
+  </script>
+  </body>
+  
+  </html>
