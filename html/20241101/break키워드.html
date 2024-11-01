@@ -1,0 +1,9 @@
+<script>
+  //break 키워드
+// 1부터 5까지 콘솔에 출력
+  for ( let i = 1; i<=5; i++) { //변수 i는 지역변수
+    console.log(`&{i}: *`);
+    break; // 이 키워드를 만나는 즉시, 구문을 빠져나옴 
+  }
+  console.log(i); // 오류: Uncaught ReferenceError: i is not defined
+</script>
