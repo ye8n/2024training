@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <title>math객체</title>
@@ -40,11 +41,18 @@
     // 241102 이어서~ 
     console.log('.min() --------');
     // 제일 작은 값 반환
+    console.log(Math.min(0.5, 5, 10, 20)); //0.5 출력
+
     console.log('.max() --------');
     // 제일 큰 값 반환
-    console.log('.toFixed() --------');
+    console.log(Math.max(0.5, 5, 10, 20)) //20출력
+
+    console.log('.toFixed(n) --------'); //n= 소숫점 n자리 수까지
     // 소수점 이하 몇자리까지만 반환
+    let num = Math.random();
+    num = num * 10 +1; //재대입
+    console.log(num.toFixed(3));
   </script>
-  </body>
-  
-  </html>
+</body>
+
+</html>

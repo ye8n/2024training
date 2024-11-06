@@ -1,0 +1,25 @@
+<script>
+  //함수Ex1.html
+
+  /* 
+    1. 아메리카노는 4000원 입니다 출력 
+    2. 라떼는 4500원입니다 `12345678출력
+    3. 함수 표현식으로 
+  */
+
+  const coffee = function(drink1,drink2='물') { //drink1·2는 매개변수, 지역변수
+    console.log(`${drink1}는 4000원입니다.`);
+    console.log(`${drink2}는 4500원입니다.`);
+  }
+  coffee('아메리카노', '라떼'); //함수 호출
+  coffee('녹차'); //함수 호출
+
+  console.log(`---두 번째 문제---`);
+
+  drink1('아메리카노', 4000); //아메리카노의 가격은 4000원입니다.
+  drink2('라떼', 4500); //아메리카노의 가격은 4000원입니다.
+
+  const drink = function(item= "", price=0){
+    console.log(`${item}의 가격은 ${price.toLocaleString()}원입니다.`);
+  } //.toLocaleString()는 사용자들이 보는 최종 화면에만.
+</script>

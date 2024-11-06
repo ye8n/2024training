@@ -1,0 +1,28 @@
+<script>
+  /* 이벤트를 만들 때 많이 사용함
+    롤링페이지 등
+
+
+    setTimeout(콜백함수, 시간) 비등기 함수
+    정해진 시간 뒤 한 번만 실행
+
+    setTimeout() => {
+    console.log(`3초 뒤에 실행`)
+    }, 3 * 1000; 
+   */
+  
+  const obj = () => console.log(`3초 뒤에 실행`); //화살표 함수
+
+  // setTimeout(실행할동작의함수,몇분뒤에한번실행할지); 
+
+  setTimeout(매개변수,3000); //매개변수 글자 안에 함수를 넣으면 복잡하니까... obj에 넣는다? 화살표 함수 구조 이해x... 
+  //() =>  : 화살표함수 기본구조
+
+  const once = setTimeout( () =>{
+    console.log(`2초 뒤에 실행`)
+  }, 4000/2 );
+
+  
+  // clearTimeout(); : setTimeout()을 중단함
+  clearTimeout(once); //if문을 써서 ~한 상황이면 clear해라. 
+</script>
