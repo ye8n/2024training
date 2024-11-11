@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.side-menu{
+  max-width: 250px; min-width: 200px; text-transform: uppercase; letter-spacing: 1px;
+}
+
+.side-menu h3{
+  background: lightskyblue;
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px;
+  line-height: 24px;
+}
+
+.side-menu h3:hover{
+
+}
+
+.side-menu li{
+  background: lightcyan;
+}
+
+.side-menu li p{
+  padding: 10px;
+}

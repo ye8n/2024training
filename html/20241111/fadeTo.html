@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>fadeTo</title>
+  <style>
+    .box {
+      list-style: none;
+      margin: 0; padding: 0;
+      text-align: center; font-weight: bold;
+    }
+    .box li {
+      width: 150px; height: 150px;
+      color: #E8BCB9
+    }
+    .box li:nth-child(1) { background-color: #432E54; }
+    .box li:nth-child(2) { background-color: #4B4376; }
+    .box li:nth-child(3) { background-color: #AE445A; }
+    .box li:nth-child(4) { background-color: #526E48; }
+  </style>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <script>
+ $(function () {
+  $('#btn1').on('click', ()=>{
+    $('.box').children().
+
+    $('.box').find('li:eq(3)').fadaTo(1000, 0.1);
+  })
+ });
+  </script>
+</head>
+<body>
+  <h1>.fadeTo(속도, 불투명도)</h1>
+  <button class="btn" id="btn1">.fadeTo()</button>
+
+  <ul class="box">
+    <li>box1</li>
+    <li>box2</li>
+    <li>box3</li>
+    <li>box4</li>
+  </ul>
+</body>
+</html>

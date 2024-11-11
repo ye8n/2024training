@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>show+hide+toggle</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 300px;
+      background: #000;
+      color: aliceblue;
+      font-weight: bold;
+    }
+  </style>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      // btn1을 클릭하면 .box를 탐색
+
+      $('#btn1').on('click', function () {
+        $('.box1').show(); // ==display
+      });
+
+      // btn2를 클릭하면 .box를 숨김 (화살표 함수로)
+      $('#btn2').on('click', () => {
+        $('.box').hide(); // ==display:none
+      });
+
+      // btn3을 클릭하면 토글
+      $('#btn3').on('click', () => {
+        $('.box').toggle();
+      });
+
+
+    });
+  </script>
+</head>
+
+<body>
+  <h1>.show() .hide() .toggle()</h1>
+  <p><a href="https://api.jquery.com/category/effects/" target="_blank">Effects</a></p>
+
+  <!-- btn.btn#btn$*3 -->
+  <button class="btn" id="btn1">.show()</button>
+  <button class="btn" id="btn2">.hide()</button>
+  <button class="btn" id="btn3">.toggle()</button>
+
+  <div class="box">
+    <p>show() 보임</p>
+    <p>hide() 숨김</p>
+    <p>toggle() show, hide</p>
+  </div>
+</body>
+
+</html>
