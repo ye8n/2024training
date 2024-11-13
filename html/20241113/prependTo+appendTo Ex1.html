@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>prependTo+appendTo Ex1</title>
+  <link rel="stylesheet" href="../asset/styles/reset.min.css">
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <style>
+    .box{
+      border: 3px solid #000;
+      width: 150px; height: 150px;
+      margin: 0 auto;
+      line-height: 150px; text-align: center;
+      font-weight: bold;
+      overflow: hidden; /* 넘치는 영역 숨기기 */
+    }
+    .box li{
+      width: 100%; height: 100%;
+    }
+    .item1{background: lightblue;}
+    .item2{background: lightcoral;}
+    .item3{background: lightgreen;}
+    .item4{background: lightslategray;}
+  </style>
+</head>
+<body>
+  <h1>prependTo+appendTo Ex1</h1>
+  <ul class="box">
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+  </ul>
+
+  <script>
+    // setInterval();
+    //.appentTo()
+
+    //  const boxChange = () => $('.box li:first-child').appendTo('.box');
+    const boxChange = () => $('.box li').first().appendTo('.box');
+
+    setInterval(boxChange, 2000);
+  </script>
+</body>
+</html>

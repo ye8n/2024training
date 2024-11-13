@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>togggleClassEx</title>
+  <style>
+    .box{
+      border: 3px solid #000;
+      background: orange;
+      width: 150px; height: 150px;
+      margin: 20px auto;
+      transition: 0.4s;
+    }
+
+    /* 스크립트로 클래스를 붙이는 경우, 우선순위를 위해 종속선택자로 작성함  */
+    .box.bg{ 
+      background: #467;
+      width: 80vw;
+    }
+  </style>
+<script src="../asset/script/jquery-3.7.1.min.js"></script>
+  
+<script>
+  $(function(){
+
+    $('.btn').on('click', () => $('.box').toggleClass('bg'))
+  })
+</script>
+
+</head>
+<body>
+  <h1>togggleClassEx</h1>
+  <button class="btn">toggle</button>
+  <div class="box">box</div>
+</body>
+</html>

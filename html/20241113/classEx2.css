@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.wrapper .txt-wrapper{
+  position: absolute;
+  top: 0; left: 0;
+  font-weight: bold;
+}
+
+.wrapper .txt-wrapper span{
+  color: rgb(30, 255, 180);
+  display: block;
+  transition: 0.4s;
+  font-size: 1.5rem;
+  transform: translateY(40px);
+
+  opacity: 0;
+}
+
+.wrapper .txt-wrapper h2{
+  color: rgb(0, 247, 255);
+  transition: 1s 0.8s; /* 진행시간 대기시간 */
+  font-size: 3rem;
+  line-height: 0.9;
+  margin: 10px 0;
+  transform: translateY(60px);
+
+  opacity: 0;
+}
+
+.wrapper .txt-wrapper.active span, .wrapper .txt-wrapper.active h2{
+  transform: translateY(0);
+  opacity: 1;
+}

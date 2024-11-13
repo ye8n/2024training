@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>attr2</title>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $('.btn1').on('click', function () {
+        //attr는 html
+        $('img').attr({ src: './img1.png', alt: 'img1' }).css({ border: '3px solid orange' });
+      })
+      $('.btn2').on('click', function () {
+        $('img').attr({ src: './img2.jpg', alt: 'img2' }).css({ border: '3px dotted red' });
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <h1>attr2</h1>
+  <button class="btn1">이미지1</button>
+  <button class="btn2">이미지2</button>
+
+  <p><img src="" alt="img1"></p>
+</body>
+
+</html>
