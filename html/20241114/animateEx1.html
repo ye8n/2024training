@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>animateEx1</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: rebeccapurple;
+      position: relative;
+    }
+  </style>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <button id="btn1">왼쪽</button>
+  <button id="btn2">오른쪽</button>
+
+  <div class="box">애니메이션</div>
+
+  <script>
+    $('#btn1').on('click', function () {
+      $('.box').animate({ left: '-=100' })
+    })
+    $('#btn2').on('click', function () {
+      $('.box').animate({ left: '+=100' })
+    })
+
+    // 키보드로 제어
+    // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
+    // https://api.jquery.com/keydown/#on-
+
+    //(e.key === 'enter') || (e.key ===13) ??13번
+    $(document).on('keydown', function (e) {
+      console.log(e.key);
+
+      switch (e.key) {
+        case "ArrowLeft" :
+          $('.box').animate({ left: '-=100' });
+          break;
+        case "ArrowRight" :
+          $('.box').animate({ left: '+=100' });
+          break;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

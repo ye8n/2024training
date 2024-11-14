@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>animateEx2</title>
+  <link rel="stylesheet" href="../asset/styles/reset.min.css">
+  <style>
+    .container {
+      width: 80vw;
+      border: 3px solid #000;
+      min-width: 400px;
+      margin: 50px auto;
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .container .btns-group {
+      display: flex;
+      justify-content: center;
+
+      position: absolute;
+      bottom: 10px;
+
+      width: 100%;
+      z-index: 999;
+    }
+
+    .container .btns-group li {
+      background: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      text-indent: -999px;
+      margin: 6px;
+      border-radius: 50%;
+    }
+
+    .container .btns-group li:hover {
+      background: rgba(0, 0, 0, 1);
+    }
+
+    .container .imgs-group {
+      display: flex;
+      width: 400%;
+      /* img의 개수만큼, 4개이므로 .container의 4배값을 부여*/
+      position: relative;
+    }
+
+    .container .imgs-group li {
+      width: 25%;
+      /* 부모인 ul을 기준으로, 4분의 1씩 차지해야 하므로 25% 적용. 만약 li가 5개라면, 20퍼씩. */
+    }
+  </style>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="btns-group">
+      <li>첫 번째 버튼</li>
+      <li>두 번째 버튼</li>
+      <li>세 번째 버튼</li>
+      <li>네 번째 버튼</li>
+    </ul>
+    <ul class="imgs-group">
+      <li><img src="https://placehold.co/600x400/78B3CE/FBF8EF?text=img1" alt="img1"></li>
+      <li><img src="https://placehold.co/600x400/C9E6F0/FBF8EF?text=img2" alt="img2"></li>
+      <li><img src="https://placehold.co/600x400/F96E2A/FBF8EF?text=img3" alt="img3"></li>
+      <li><img src="https://placehold.co/600x400/8B5DFF/FBF8EF?text=img4" alt="img4"></li>
+    </ul>
+  </div>
+
+  <script>
+    /* 
+    1. 첫 번째 버튼을 클릭하면 첫 번째 이미지로 이동 left, mg-left
+     $('.btns-group li').eq(0).on('click', function(){
+      $('.imgs-group').animate({left:'-100%'}, 300)
+    })
+    2. 두 번째 버튼을 클릭하면 두 번째 이미지로 이동
+    $('.btns-group li').eq(1).on('click', function (){
+        $('.imgs-group').animate({ left: '-100%' }, 300, 'easeInOutExpo');
+      }) */
+
+    $('.btns-group li').on('click', function () {
+      const idx = $(this).index();
+      $('.imgs-group').animate({ marginLeft: -100 * idx + '%' }, 300);
+    });
+  </script>
+</body>
+
+</html>

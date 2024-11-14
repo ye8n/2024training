@@ -22,7 +22,7 @@
 
   <script>
     $('.btn').on('click',function(){
-      // .animate({속성:값, 속성:값, 속성:값} [,진행시간(기본값400), 움직임 형태, ...]);
+      // .animate({속성:값, 속성:값, 속성:값} [,진행시간(기본값400), 움직임 형태, ...]); // ...엔 함수를 넣을 수 있음. 순차적으로 실행해야 하는 경우, ... 안에 함수 대입
       // $('.box').animate({}, 1500, 'ease'); // https://easings.net/ko
       $('.box').animate({
         'width': '300px',
@@ -32,7 +32,6 @@
         color: 'maroon',
         backgroundColor: '#9CDBA6'
       }, 1500)
-
     })
   </script>
 </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>animation2</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #ddd;
+      position: relative;
+    }
+  </style>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <script src="../asset/script/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <h1>animation2</h1>
+  <button id="btn1">실행</button>
+  <button id="btn2">순차실행1</button>
+  <button id="btn3">순차실행2</button>
+
+  <div class="box">애니메이션</div>
+
+  <script>
+    // 첫 번째 버튼 클릭시, width, height, margin-top 이용해 아래로 이동, left를 이용해 오른쪽으로 이동, 배경색 변경?
+
+    $('#btn1').on('click', function () {
+      $('.box').animate({
+        width: '300px',
+        height: 200,
+        'margin-top': 100,
+        left: 100, //position 값 필요함
+        backgroundColor: '#78b3ce' //js 형식
+      }, 800, 'linear')
+    });
+
+    
+    // 콜백 지옥
+    $('#btn2').on('click', function () {
+      $('.box').animate({ width: 300 },500,'linear', function() {
+        $('.box').animate({ height: 200 }, 400, 'easeInOutQuint', function() {
+          $('.box').animate({ marginTop: 100 }, 800,'easeInOutBack', function() {
+            $('.box').animate({ 'transform' : 'translateX(100px)'}, 1000, 'easeInOutElastic', function() {
+              $('.box').animate({backgroundColor : '#78B3CE'});
+            })
+          } );
+        });
+      });
+    });
+
+    // method chaning 메소드 체이닝 방식, 순차 진행
+    $('#btn3').on('click', function () {
+      $('.box').animate({ width: 300 },500,'linear').animate({ height: 200 }, 400, 'easeInOutQuint').animate({ marginTop: 100 }, 800,'easeInOutBack').animate({backgroundColor : '#78B3CE'});
+    })
+  </script>
+</body>
+</html>

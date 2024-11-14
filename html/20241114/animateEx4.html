@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>animateEx4</title>
+<link rel="stylesheet" href="../asset/styles/reset.min.css">
+<style>
+  .wrapper {
+      background: #78b3ce;
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      left: -200px;
+    }
+
+    .wrapper .side-menu {
+      /* background: #Add; */
+      width: 200px;
+      height: 100%;
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 2;
+      text-align: center;
+      padding-top: 120px;
+      position: relative;
+      padding-top: 120px;
+    }
+
+    .wrapper .btn {
+      background: #78b3ce;
+      width: 50px; height: 50px;
+      position: absolute;
+      left: 200px; top: 20px;
+      cursor: pointer;
+      text-indent: -9999px; /* 버튼 글자 숨기기 */
+      background: #78b3ce url(./images/lock.svg) no-repeat 50% / 60%;
+      /* 60%: 이미지 사이즈*/
+    }
+
+    .wrapper .btn.opened{
+      background-image: url(./images/open.svg);
+    }
+</style>
+<script src="../asset/script/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <nav class="wrapper">
+    <ul class="side-menu">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <div class="btn">버튼</div>
+  </nav>
+
+  <script>
+
+    let isOpen = false; //ture false를 가진 값은 is를 붙임
+
+    $('.btn').on('click', function(){
+      $('.wrapper').animate({
+        // left: $('.wrapper').css('left') === '0px' ? '-200px' : '0px' //방법1
+        left: isOpen ? '-200px' : '0px'
+      });
+      isOpen = !isOpen; //재할당
+      $(this).toggleClass('opened')
+    })
+  </script>
+</body>
+</html>
