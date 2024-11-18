@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>scrollTopEx</title>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="../asset/styles/reset.min.css">
+  <style>
+    body {
+      text-align: center;
+    }
+
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #78B3CE;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      transition: 0.4s;
+    }
+
+    header .global-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 80px;
+      transition: 0.3s;
+    }
+
+    header .global-menu a {
+      display: block;
+      padding: 0 10px;
+    }
+
+    main {
+      height: 200vh;
+      background-color: #EBEAFF;
+      transition: 0.3s;
+    }
+
+    main h2 {
+      padding-top: 200px;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+
+    .go-to-up {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background-color: #fff;
+    }
+
+    header.change-header {
+      background-color: rgba(250, 177, 47, 0.7);
+      color: #fff;
+      font-size: 1rem;
+      backdrop-filter: blur(50px);
+    }
+
+    header.change-header .global-menu {
+      height: 50px;
+      border-bottom: 1px solid #000
+    }
+
+    header.change-header+main {
+      padding-top: 100px;
+      background-color: #FA4032;
+      color: #fff;
+    }
+  </style>
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <ul class="global-menu">
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </header>
+  <main>
+    <h2>main</h2>
+  </main>
+  <a href="#" class="go-to-up">맨 위로</a>
+
+  <script>
+    $('a[href="#"]').on('click', function(e) {
+      e.preventDefault();// 요소의 기본 성격 제거
+    });
+
+    $('.go-to-up').on('click', function() {
+      $('html, body').animate({ scrollTop: 0 }, 300);
+    });
+
+    // 스크롤 된 값이 300이상이면 addClass(), 아니면 removeClass()
+    let scrollbar = 300;
+    $(window).on('scroll', function () {
+      const scrollHt = $(this).scrollTop();
+      if(scrollHt > scrollbar) {
+        $('header').addClass('change-header');
+      } else {
+        $('header').removeClass('change-header');
+      }
+    });
+  </script>
+</body>
+
+</html>
