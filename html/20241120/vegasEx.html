@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>vegasEx</title>
+  <!-- reset -->
+  <link rel="stylesheet" href="../asset/styles/reset.min.css">
+  <!-- 플러그인 css -->
+  <link rel="stylesheet" href="./vegas/vegas.min.css">
+  <!-- 공통 css: 생략 -->
+  <!-- 이 페이지에만 적용하는 css -->
+  <style>
+    .container {
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      border: 3px solid #000;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .container .btn {
+      background: #fff;
+      border: 3px solid #000;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+    }
+
+    .container .btn:hover {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+
+  <!-- 제이쿼리 -->
+  <script src="../asset/script/jquery-3.7.1.min.js"></script>
+  <!-- 다른 플러그인 js -->
+   <script src="./vegas/vegas.min.js"></script>
+  <!-- 내가 작업한 js : defer를 붙이는 것을 권장-->
+  <!-- <script src=""defer></script> -->
+  <script>
+    $(function () {
+      $('.container').vegas({
+        slides: [
+          { src: './images/bg1.jpg' },
+          { src: './images/bg2.jpg' },
+          { src: './images/bg3.jpg' },
+          { src: './images/bg4.jpg' },
+        ],
+        overlay: './vegas/overlays/07.png',
+        timer: false, /* 하단에 하얀색 타이머 */
+        delay: 1000,
+        // transition: 'slideLeft', : 애니메이션과 동시적용x
+        animation: 'kenburnsUpLeft',
+
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <a href="#" class="btn">버튼</a>
+  </div>
+
+</body>
+
+</html>

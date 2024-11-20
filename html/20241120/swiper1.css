@@ -1,0 +1,36 @@
+@charset "urf-8";
+
+/* main-slide */
+.main-slide{
+  width: 90vw;
+  height: 60vh;
+  margin: 0 auto 100px;
+  background: #ddd;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.main-slide .swiper-wrapper li{
+  background: no-repeat 50%/ cover; /*중앙정렬, 전체 채움*/
+}
+.main-slide .swiper-wrapper .bg1{background: url(https://placehold.co/1000x500/B1D690/000?text=pic1);}
+.main-slide .swiper-wrapper .bg2{background: url(https://placehold.co/1000x500/B08590/000?text=pic2);}
+.main-slide .swiper-wrapper .bg3{background: url(https://placehold.co/1000x500/B1D690/000?text=pic3);}
+.main-slide .swiper-wrapper .bg4{background: url(https://placehold.co/1000x500/B1D690/000?text=pic4);}
+
+.main-slide .swiper-wrapper .bg-box{
+  background: rgba(255, 255, 255, 0.7);
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 50%; left: 50%;
+  text-indent: -9999px;
+}
+
+.main-slide .swiper-wrapper .title{
+  font-weight: bold;
+  font-size: 1.6rem;
+  position: absolute;
+}
+
