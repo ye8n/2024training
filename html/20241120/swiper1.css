@@ -1,36 +1,67 @@
-@charset "urf-8";
+@charset "utf-8";
+
+/* :root {} 전역변수 */
 
 /* main-slide */
-.main-slide{
+.main-slide {
+  /* 지역변수 */
+  --swiper-navigation-color : #fff;
+  --swiper-navigation-size : 30px;
+  --swiper-navigation-sides-offset : 40px;
+
+
   width: 90vw;
   height: 60vh;
   margin: 0 auto 100px;
-  background: #ddd;
+  background-color: #ddd;
   text-transform: capitalize;
   font-size: 1.1rem;
   position: relative;
 }
-
-.main-slide .swiper-wrapper li{
-  background: no-repeat 50%/ cover; /*중앙정렬, 전체 채움*/
+.main-slide .swiper-wrapper li {
+  background: no-repeat 50% / cover;
 }
-.main-slide .swiper-wrapper .bg1{background: url(https://placehold.co/1000x500/B1D690/000?text=pic1);}
-.main-slide .swiper-wrapper .bg2{background: url(https://placehold.co/1000x500/B08590/000?text=pic2);}
-.main-slide .swiper-wrapper .bg3{background: url(https://placehold.co/1000x500/B1D690/000?text=pic3);}
-.main-slide .swiper-wrapper .bg4{background: url(https://placehold.co/1000x500/B1D690/000?text=pic4);}
+.main-slide .swiper-wrapper .bg1 { background-image: url(https://placehold.co/1000x500/A02334/000?text=pic1);}
+.main-slide .swiper-wrapper .bg2 { background-image: url(https://placehold.co/1000x500/FFAD60/000?text=pic2);}
+.main-slide .swiper-wrapper .bg3 { background-image: url(https://placehold.co/1000x500/FFEEAD/000?text=pic3);}
+.main-slide .swiper-wrapper .bg4 { background-image: url(https://placehold.co/1000x500/96CEB4/000?text=pic4);}
 
-.main-slide .swiper-wrapper .bg-box{
-  background: rgba(255, 255, 255, 0.7);
+.main-slide .swiper-wrapper .bg-box {
+  background-color: rgba(255,255,255,0.7);
   width: 500px;
   height: 250px;
   position: absolute;
-  top: 50%; left: 50%;
-  text-indent: -9999px;
+  bottom: 50px; right:50px;
+  padding: 20px;
 }
-
-.main-slide .swiper-wrapper .title{
+.main-slide .swiper-wrapper .bg-box .title {
   font-weight: bold;
   font-size: 1.6rem;
-  position: absolute;
+}
+.main-slide .swiper-wrapper .bg-box .subtitle {
+  font-size: 1.3rem;
+  margin: 10px 0; 
+}
+.main-slide .swiper-wrapper .bg-box .text {
+  line-height: 1.5;
+  max-width: 400px;
 }
 
+/* nav icon */
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 10px);
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  /* content: "👈"; */
+  content: "";
+  background-color:blue;
+  width: 20px; height: 50px;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: "👉";
+}
+.swiper-button-next:hover:after, 
+.swiper-rtl:hover
+.swiper-button-prev:hover:after {
+  transform: translateY(-6px);
+}
