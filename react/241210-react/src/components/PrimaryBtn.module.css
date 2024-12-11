@@ -1,0 +1,14 @@
+.primaryBtn {
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 14px 50px;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 60px auto;
+  width: 200px;
+  cursor: pointer;
+}
+.primaryBtn:hover {
+  background-color: #000;
+  color: #fff;
+}

@@ -1,0 +1,37 @@
+/* StyleModule.module.css */
+.wrapper {
+  border: 1px solid #000;
+  width: 80vw;
+  margin: 20px;
+  padding: 20px;
+}
+.bg {
+  background-color: maroon;
+  color: #fff;
+}
+.fontBold {
+  font-weight: 700;
+}
+.fontSize {
+  font-size: 1.4rem;
+}
+.listStyle {
+  margin: 5px;
+  padding: 5px;
+  list-style: disc inside;
+}
+.underline {
+  text-decoration: underline;
+}
+
+:global .btnStyle {
+  border: 1px solid #000;
+  display: inline-block;
+  padding: 4px 8px;
+  font-weight: bold;
+  text-align: center;
+}
+:global .btnStyle:hover {
+  background-color: #000;
+  color: #fff;
+}

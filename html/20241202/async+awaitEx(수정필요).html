@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>async+await Ex</title>
+  <style>
+    ul{
+      padding: 20px;
+      border-bottom: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="result">
+
+  </div>
+  <script>
+    const result = document.querySelector('.result');
+    const URL = 'https://jsonplaceholder.org/users';
+
+    // 데이터 요청
+    // fetch().then().then()
+
+/*     
+    방법1.
+        fetch(URL)
+    .then(response => response.json())
+    .then(items=>console.log(items)); */ //전통적인 방식 이 방식은 잘 쓰지 않음
+
+
+    //방법2.
+    const data = async() => {
+      const response = await fetch(URL);
+      const users = await response.json(); //호출하기 전까지 잠시 대기
+
+      // console.log(users);
+      userList(users);
+    }
+
+    data(); //함수 형태로 호출
+
+
+    // 문서출력 
+    const userList=()=>{
+
+    }
+
+    data();
+  </script>
+</body>
+</html>

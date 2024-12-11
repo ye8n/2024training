@@ -1,0 +1,77 @@
+// SCSS.module.scss
+// scss 전역변수 선언
+$orange: orange;
+$maroon: maroon;
+$salmon: salmon;
+$lightblue: lightblue;
+$fontSize: 1.4rem;
+
+  
+
+// @mixin 선언
+@mixin boxStyle($item) {
+  $width: 200px;
+  height: 200px;
+
+  @if $item % 2 == 0 {
+    $width: $width + 30px
+  } @else if $item % 3 == 0 {
+    $width: $width - 30px
+  } @else {
+    $width: $width;
+  }
+
+  transition: 0.3s;
+  font-size: 10px * $item;
+  &:hover {
+    transform: scale(1.1) rotate(45deg);
+  }
+}
+
+// .wrapper .title {} -> .wrapper { .title {} }
+.wrapper {
+  // 지역변수 선언
+  $spacing-20: 20px;
+
+  border: 1px solid #000;
+  margin: $spacing-20; padding: $spacing-20;
+  
+  .title {
+    font-size: $fontSize;
+    margin: $spacing-20 0;
+    background-color: $orange;
+
+    &:hover {
+      background-color: $maroon;
+      color: #fff;
+    }
+  }
+  .box {
+    margin: $spacing-20 0;
+
+    &.lightblue {
+      background-color: $lightblue;
+    }
+    .list {
+      text-decoration: underline;
+    }
+  }
+
+  .container {
+    border: 1px solid #000;
+
+    &.salmon {
+      background-color: $salmon;
+      // 믹스인(Mixins) 적용 @include
+      @include boxStyle(3);
+    }
+    &.orange {
+      background-color: $orange;
+      @include boxStyle(1);
+    }
+    &.maroon {
+      background-color: $maroon;
+      @include boxStyle(2);
+    }
+  }
+}

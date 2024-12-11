@@ -1,0 +1,24 @@
+.mainSwiper{
+  // 플러그인에서 변경 시, 변수를 가져와 변경하는 방법을 추천함.
+  --swiper-theme-color: orange;
+
+  height: 50vh;
+
+  .bg{
+    height: 100%;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+    &.bg4{ //&.bg4는 종속선택자와 유사함
+      text-indent: -9999px;
+      background: url(../assets/images/bg1.png) no-repeat 0 50% / cover;
+    }
+  }
+
+  // 적용되지 않음
+  // .swiper-button-prev{
+  //   background: orange;
+  // }
+}

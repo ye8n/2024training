@@ -1,0 +1,27 @@
+.businessItem {
+  min-width: 220px;
+  max-width: calc(25% - 20px);
+}
+.businessItem .businessImg {
+  overflow: hidden;
+}
+.businessItem .businessImg img {
+  transition: 0.4s;
+}
+.businessItem .businessImg:hover img {
+  transform: scale(1.1);
+}
+.businessItem .title {
+  padding: 20px 0 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #999;
+  margin-bottom: 20px;
+}
+.businessItem .title strong {
+  display: block;
+}
+.businessItem .desc {
+  color:#222;
+  line-height: 1.5;
+}

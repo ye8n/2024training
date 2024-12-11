@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>filter</title>
+</head>
+<body>
+  <h1>.filter()</h1>
+  <p>탐색 메서드를 통해 '새로운 배열'로 반환</p>
+  <p>주로 리스트의 목록 삭제에서 많이 사용</p>
+
+  <script>
+    /* 
+      arr.filter(콜백함수[, ...]);
+      arr.filter((현재요소[,인덱스, 호출된 배열]) => { });
+
+      반환값: 새로운 배열. false인 경우 빈 배열 반환
+    */
+
+    const nums = [10, '20', 20, 30, 40, 50];
+    const data = [
+      { id: 1, coffee: '아메리카노' },
+      { id: 2, coffee: '카페라떼' },
+      { id: 3, coffee: '바닐라라떼' },
+      { id: 4, coffee: '카페모카' },
+      { id: 5, coffee: '카페마끼아또' },
+      { id: 6, coffee: '카페 프라푸치노' },
+    ];
+  </script>
+</body>
+</html>

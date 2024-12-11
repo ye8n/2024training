@@ -1,0 +1,21 @@
+// SCSS.module.scss
+
+// scss 전연 변수 선언 방식 
+$orange: orange;
+$maroon: maroon;
+$salmon: salmon;
+$lightblue: lightblue;
+$fontsize: 1.4rem;
+
+
+// .wrapper .title {} -> .wrapper { .title{} }
+.wrapper{
+  // 지역변수 선언
+  $spacing-20: 20px; //지역변수 선언 
+  border: 1px solid #000;
+  margin: $spacing-20; padding: $spacing-20;
+
+  .title{
+    font-size: $fontsize;
+  }
+}

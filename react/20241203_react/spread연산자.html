@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>spread 연산자</title>
+
+</head>
+<body>
+  <h1>spread 연산자, 전개구문 연산자</h1>  
+  <p>배열, 객체, 함수 등에서 사용하며 원본을 복사해 반환</p>
+
+  <script>
+    /* 
+      ...(전개구문)
+      함수 호출: myFn(...fx);
+      배열 리터럴, 문자열: const arr = [...배열, '4', '문자', 6];
+      객체 리터럴: const obj = { ...객체 }
+    */
+
+    const coffee = ['아메리카노', '카페라떼', '바닐라라떼', '에스프레소'];
+    const arr1 = coffee.concat();// 배열이나 객체를 복사해 새로운 배열로 반환
+    const arr2 = [...coffee];
+
+    console.log(arr1);
+    console.log(arr2);
+
+    console.log(
+      coffee.concat('생강차', '유자차')
+    );
+    console.log(
+      [...coffee, '생강차', '유자차']
+    );
+
+    const data = [
+      { id: 1, coffee: '아메리카노' },
+      { id: 2, coffee: '카페라떼' },
+      {
+        "id": 3,
+        "firstname": "Bob",
+        "lastname": "Johnson",
+        "email": "bobjohnson@example.com",
+        "birthDate": "1974-11-12",
+        "login": {
+          "uuid": "3a0eed11-9430-4d68-901f-c0d4c1c3bf12",
+          "username": "bobjohnson",
+          "password": "jsonplaceholder.org",
+          "md5": "c1328472c5794a25723600f71c1b4586",
+          "sha1": "35544a31cc19bd6520af116554873167117f4d94",
+          "registered": "2022-06-10T12:45:20.022Z"
+        },
+        "address": {
+          "street": "789 Elm Street",
+          "suite": "Apt. 100",
+          "city": "Anytown",
+          "zipcode": "12345-6789",
+          "geo": {
+            "lat": "42.5678",
+            "lng": "-71.1234"
+          }
+        },
+        "phone": "(555) 555-9012",
+        "website": "www.bobjohnson.com",
+        "company": {
+          "name": "Acme Corporation",
+          "catchPhrase": "Your trusted partner",
+          "bs": "Manufacturing"
+        }
+      },
+      { id: 4, coffee: '카페모카' }
+    ];
+  </script>
+</body>
+</html>
